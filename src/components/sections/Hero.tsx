@@ -11,7 +11,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
-      {/* Background Image */}
+      {/* Animated Background */}
       <div className="absolute inset-0 z-0">
         <img
           src={heroImage}
@@ -19,19 +19,37 @@ const Hero = () => {
           className="w-full h-full object-cover opacity-20"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-hero opacity-90"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-90 animate-gradient"></div>
+        
+        {/* Floating Geometric Shapes */}
+        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary-light/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-primary/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }}></div>
+        
+        {/* Grid Pattern */}
+        <div className="absolute inset-0 opacity-5" style={{
+          backgroundImage: 'linear-gradient(hsl(var(--primary-foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-foreground)) 1px, transparent 1px)',
+          backgroundSize: '50px 50px'
+        }}></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center animate-slide-up">
+          <div className="inline-block mb-4 px-4 py-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full border border-primary-foreground/20">
+            <span className="text-sm font-medium text-primary-foreground">🚀 Innovation Meets Intelligence</span>
+          </div>
+          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Expert Software Development and AI Solutions
+            Building Tomorrow's Solutions,
+            <span className="block mt-2 bg-gradient-to-r from-primary-foreground to-primary-foreground/70 bg-clip-text text-transparent">
+              Today
+            </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Affordable, AI-optimized software solutions tailored for your business. 
-            Professional development and reliable hosting services in India.
+            Future-ready AI-powered solutions, intelligent automation, and cutting-edge development 
+            that transforms businesses across industries.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -55,18 +73,18 @@ const Hero = () => {
           </div>
 
           {/* Key Features */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-primary-foreground/80">
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
-              <span className="text-sm font-medium">AI Optimized</span>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="group flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300 hover:scale-105 future-glow">
+              <div className="w-3 h-3 bg-primary-foreground rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium text-primary-foreground">AI-Powered Innovation</span>
             </div>
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
-              <span className="text-sm font-medium">Mobile Responsive</span>
+            <div className="group flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300 hover:scale-105 future-glow" style={{ animationDelay: '0.1s' }}>
+              <div className="w-3 h-3 bg-primary-foreground rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium text-primary-foreground">Future-Ready Architecture</span>
             </div>
-            <div className="flex items-center justify-center space-x-2">
-              <div className="w-2 h-2 bg-primary-foreground rounded-full"></div>
-              <span className="text-sm font-medium">Fast Performance</span>
+            <div className="group flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300 hover:scale-105 future-glow" style={{ animationDelay: '0.2s' }}>
+              <div className="w-3 h-3 bg-primary-foreground rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium text-primary-foreground">Intelligent Automation</span>
             </div>
           </div>
         </div>

@@ -62,6 +62,10 @@
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
+    /* Innovation & Future Effects */
+    --glow-primary: 0 0 20px hsl(var(--primary) / 0.3);
+    --glow-intense: 0 0 40px hsl(var(--primary) / 0.5);
+
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
@@ -127,5 +131,72 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Interactive & Future-Ready Animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--primary) / 0.3); }
+    50% { box-shadow: 0 0 40px hsl(var(--primary) / 0.6); }
+  }
+
+  @keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  @keyframes slide-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes scale-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-in-up 0.6s ease-out;
+  }
+
+  .animate-scale-pulse {
+    animation: scale-pulse 4s ease-in-out infinite;
+  }
+
+  .interactive-card {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-custom-lg cursor-pointer;
+  }
+
+  .future-glow {
+    box-shadow: var(--glow-primary);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .future-glow:hover {
+    box-shadow: var(--glow-intense);
   }
 }

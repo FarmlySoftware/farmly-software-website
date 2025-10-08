@@ -2,8 +2,11 @@ import aboutTeamImage from "@/assets/about-team.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float"></div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-6">
@@ -15,15 +18,15 @@ const About = () => {
             </div>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Farmly Softwares is a leading software development firm offering end-to-end AI-powered 
-              solutions and reliable hosting. We help businesses establish a strong digital 
-              presence with optimized, intelligent software systems.
+              Farmly Softwares pioneers the future of business transformation through cutting-edge 
+              AI, IoT, and intelligent automation. We architect tomorrow's solutions with innovation 
+              at our core, empowering industries to leap into the digital future.
             </p>
             
             <p className="text-muted-foreground leading-relaxed">
-              With years of experience in software development and AI solutions, our team 
-              specializes in creating intelligent applications that not only look great but also 
-              perform exceptionally well with smart automation and machine learning capabilities.
+              From AI-driven intelligence to next-generation cloud infrastructure, we're not just 
+              building software—we're crafting the future. Our solutions blend innovation with 
+              practicality, transforming complex challenges into competitive advantages.
             </p>
 
             {/* Key Stats */}
@@ -65,18 +68,18 @@ const About = () => {
 
           {/* Image */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-custom-lg">
+            <div className="aspect-[4/3] rounded-lg overflow-hidden shadow-custom-lg future-glow group">
               <img
                 src={aboutTeamImage}
                 alt="Professional team collaboration in modern office, web developers working together"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 loading="lazy"
               />
             </div>
             
-            {/* Decorative element */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-primary rounded-full opacity-20"></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent rounded-full opacity-30"></div>
+            {/* Decorative animated elements */}
+            <div className="absolute -top-4 -right-4 w-24 h-24 bg-gradient-primary rounded-full opacity-20 animate-pulse-glow"></div>
+            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-accent rounded-full opacity-30 animate-float"></div>
           </div>
         </div>
       </div>
