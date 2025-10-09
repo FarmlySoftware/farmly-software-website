@@ -6,57 +6,91 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "Automotive Fleet Management System",
-      industry: "Automotive",
-      icon: Building2,
-      description: "AI-powered fleet management solution with real-time tracking, predictive maintenance, and automated scheduling for a leading automotive manufacturer.",
-      technologies: ["IoT", "AI Forecasting", "Digital Twin", "Process Automation"],
+      title: "EV Charging & Energy SaaS Platform Migration",
+      industry: "EV Charging & Energy",
+      icon: Zap,
+      description: "Migrated legacy EV charger and billing systems to AWS SaaS. Automated 90% of operations across roaming, CRM, and billing. Expanded platform to 5 markets with 30% faster deployment cycles.",
+      challenge: "Legacy infrastructure, complex integrations",
+      result: "90% automation, 5-market expansion",
+      technologies: ["AWS SaaS", "IoT", "Roaming Protocol", "CRM Integration", "Billing Automation"],
       gradient: "from-primary to-primary-dark"
     },
     {
       id: 2,
-      title: "E-Commerce Platform Transformation",
-      industry: "E-Commerce",
-      icon: ShoppingBag,
-      description: "End-to-end e-commerce platform migration from legacy system to modern Shopify Plus with custom product configurator and AI-powered recommendations.",
-      technologies: ["Shopify Plus", "AI Recommendations", "Complex Configurator", "Checkout Automation"],
+      title: "Telecommunications B2C/B2B App MVP",
+      industry: "Telecommunications",
+      icon: Radio,
+      description: "Multi-cloud B2C/B2B customer app with intelligent chatbot and CRM/Finance integrations. Delivered MVP within budget, improving customer experience metrics by 45%.",
+      challenge: "Multi-cloud complexity, tight timeline",
+      result: "On-time delivery, 45% CX improvement",
+      technologies: ["Multi-Cloud", "AI Chatbot", "CRM/Finance Integration", "Process Automation"],
       gradient: "from-primary-dark to-primary-light"
     },
     {
       id: 3,
-      title: "Media Streaming Infrastructure",
-      industry: "Media",
-      icon: Tv,
-      description: "Cloud-native media streaming platform with CDN optimization, real-time analytics, and automated content delivery for millions of concurrent users.",
-      technologies: ["Cloud Infrastructure", "DevOps", "Real-time Analytics", "CDN Optimization"],
+      title: "Automotive Manufacturing DevOps Platform",
+      industry: "Automotive",
+      icon: Building2,
+      description: "Azure-based DevOps cloud migration for major automotive manufacturer. Achieved 35% defect reduction and 20% faster delivery cycles through automated CI/CD pipelines.",
+      challenge: "Legacy systems, enterprise scale",
+      result: "35% defect reduction, 20% faster delivery",
+      technologies: ["Azure DevOps", "CI/CD", "IaC", "Digital Twin", "Process Automation"],
       gradient: "from-primary-light to-primary"
     },
     {
       id: 4,
-      title: "Telecom BSS/OSS Automation",
-      industry: "Telecommunications",
-      icon: Radio,
-      description: "Business support system automation with AI-driven customer insights, billing automation, and intelligent network optimization.",
-      technologies: ["Process Automation", "AI Validation", "EDI Integration", "RPA"],
-      gradient: "from-primary to-primary-light"
+      title: "Technology & Media Agile Transformation",
+      industry: "Technology & Media",
+      icon: Tv,
+      description: "Trained 1,000+ engineers in CI/CD, IaC, and automation practices. Implemented enterprise-wide DevOps transformation with 40% improvement in deployment frequency.",
+      challenge: "Large-scale cultural transformation",
+      result: "1,000+ engineers trained, 40% faster deploys",
+      technologies: ["DevOps Training", "CI/CD", "IaC", "Cloud Migration", "Agile Coaching"],
+      gradient: "from-primary to-accent"
     },
     {
       id: 5,
-      title: "Logistics Optimization Platform",
-      industry: "Logistics",
-      icon: Truck,
-      description: "AI-powered logistics platform with route optimization, real-time tracking, automated scheduling, and predictive demand forecasting.",
-      technologies: ["AI Forecasting", "IoT Integration", "Process Automation", "Real-time Tracking"],
-      gradient: "from-primary-dark to-primary"
+      title: "E-Commerce Checkout & Security Automation",
+      industry: "E-Commerce & Retail",
+      icon: ShoppingBag,
+      description: "Multi-tenant identity management and checkout orchestration APIs. Reduced cart abandonment by 25% and improved security compliance with automated threat detection.",
+      challenge: "Security at scale, checkout optimization",
+      result: "25% lower abandonment, enhanced security",
+      technologies: ["Identity Management", "Checkout API", "Security Automation", "Multi-tenant SaaS"],
+      gradient: "from-accent to-primary-dark"
     },
     {
       id: 6,
-      title: "EV Charging Network Management",
-      industry: "EV Charging",
-      icon: Zap,
-      description: "Comprehensive EV charging management platform with roaming capabilities, dynamic pricing, CRM integration, and real-time monitoring.",
-      technologies: ["IoT", "Roaming Protocol", "CRM Integration", "Billing Automation"],
-      gradient: "from-primary-light to-primary-dark"
+      title: "Industrial Automation Invoice Processing",
+      industry: "Industrial Automation",
+      icon: Building2,
+      description: "OCR-powered invoice workflow with automated ERP/CRM integration. Reduced manual processing time by 70% and improved accuracy to 98% through intelligent validation.",
+      challenge: "Manual processes, data accuracy",
+      result: "70% time reduction, 98% accuracy",
+      technologies: ["OCR", "RPA", "ERP/CRM Integration", "AI Validation", "Workflow Automation"],
+      gradient: "from-primary-dark to-primary-light"
+    },
+    {
+      id: 7,
+      title: "B2B Commerce RPA & Sales Automation",
+      industry: "B2B Commerce",
+      icon: Truck,
+      description: "RPA bots for finance and logistics automation. Improved operational efficiency by 45% and reduced processing errors by 60% through intelligent automation.",
+      challenge: "Manual workflows, error rates",
+      result: "45% efficiency gain, 60% fewer errors",
+      technologies: ["RPA", "Finance Automation", "Logistics Optimization", "AI Forecasting"],
+      gradient: "from-primary-light to-accent"
+    },
+    {
+      id: 8,
+      title: "Oil & Gas Data Systems Optimization",
+      industry: "Oil & Gas",
+      icon: Building2,
+      description: "Predictive maintenance and taxonomy-driven data classification. Reduced equipment downtime by 40% and improved data governance with automated categorization.",
+      challenge: "Data silos, equipment reliability",
+      result: "40% less downtime, unified data governance",
+      technologies: ["Predictive Maintenance", "Data Governance", "IoT", "AI Classification"],
+      gradient: "from-accent to-primary"
     }
   ];
 
@@ -85,7 +119,7 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => {
             const Icon = project.icon;
             return (
@@ -102,24 +136,37 @@ const Projects = () => {
                     <div className={`p-3 rounded-lg bg-gradient-to-br ${project.gradient} shadow-md group-hover:scale-110 transition-transform duration-300`}>
                       <Icon className="h-6 w-6 text-primary-foreground" />
                     </div>
-                    <Badge variant="outline" className="border-primary/30 text-primary">
+                    <Badge variant="outline" className="border-primary/30 text-primary text-xs">
                       {project.industry}
                     </Badge>
                   </div>
-                  <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
+                  <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors leading-tight mb-3">
                     {project.title}
                   </CardTitle>
-                  <CardDescription className="text-muted-foreground leading-relaxed mt-2">
+                  <CardDescription className="text-muted-foreground leading-relaxed">
                     {project.description}
                   </CardDescription>
                 </CardHeader>
 
-                <CardContent className="relative">
+                <CardContent className="relative space-y-4">
+                  {/* Challenge & Result */}
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div className="p-3 bg-background/50 rounded-lg border border-border">
+                      <div className="text-xs font-semibold text-muted-foreground mb-1">Challenge</div>
+                      <div className="text-sm text-foreground">{project.challenge}</div>
+                    </div>
+                    <div className="p-3 bg-primary/5 rounded-lg border border-primary/20">
+                      <div className="text-xs font-semibold text-primary mb-1">Result</div>
+                      <div className="text-sm text-foreground font-medium">{project.result}</div>
+                    </div>
+                  </div>
+
+                  {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, idx) => (
                       <span 
                         key={idx}
-                        className="px-3 py-1 bg-primary/5 text-primary text-xs font-medium rounded-full border border-primary/10 group-hover:bg-primary/10 transition-colors"
+                        className="px-2 py-1 bg-primary/5 text-primary text-xs font-medium rounded-full border border-primary/10 group-hover:bg-primary/10 transition-colors"
                       >
                         {tech}
                       </span>

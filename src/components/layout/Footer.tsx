@@ -84,13 +84,13 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h4 className="text-md font-semibold text-foreground">Our Services</h4>
+            <h4 className="text-md font-semibold text-foreground">Expertise</h4>
             <div className="space-y-2">
               <p className="text-sm text-muted-foreground">AI & Automation</p>
-              <p className="text-sm text-muted-foreground">IoT Solutions</p>
-              <p className="text-sm text-muted-foreground">E-Commerce</p>
+              <p className="text-sm text-muted-foreground">IoT & Digital Twin</p>
               <p className="text-sm text-muted-foreground">Cloud & DevOps</p>
-              <p className="text-sm text-muted-foreground">Custom Development</p>
+              <p className="text-sm text-muted-foreground">E-Commerce Solutions</p>
+              <p className="text-sm text-muted-foreground">Enterprise Consulting</p>
             </div>
           </div>
 
@@ -186,9 +186,11 @@ const Footer = () => {
         {/* SEO Footer Text */}
         <div className="pb-6">
           <p className="text-xs text-muted-foreground text-center">
-            AI & Automation Consulting | IoT Solutions | E-Commerce Implementation | Cloud Migration & DevOps | 
-            Custom Software Development | EV Charging Management | Business Process Automation | 
-            Serving Automotive, Telecom, Logistics, Media & EV Charging Industries
+            AI & Automation Consulting | Digital Transformation | IoT & Digital Twin Solutions | Cloud Migration & DevOps | 
+            Enterprise Software Development | EV Charging Management | Business Process Automation | DevSecOps | 
+            Serving Automotive, Energy, Telecom, Finance, Retail, Media & EV Charging Industries | 
+            Karthik Pandian Duraipandi - Senior Product & Automation Consultant | 
+            Fortune 500 Trusted | 10+ Years Experience | 30-90% Efficiency Gains
           </p>
         </div>
       </div>

@@ -6,26 +6,26 @@ const ServiceOverview = () => {
   const services = [
     {
       icon: Brain,
-      title: "AI & Automation",
-      description: "Harness custom AI solutions, industry-specific SaaS, and robotic process automation (RPA) to streamline operations. From AI projections and forecasts to agentic workflows and intelligent product recommendations, we help you work smarter.",
+      title: "AI & Agentic Automation",
+      description: "Custom AI solutions, industry-specific SaaS, and robotic process automation (RPA). From AI projections and forecasts to agentic workflows and intelligent recommendations—proven to deliver 30-90% efficiency gains across enterprises.",
       link: "#services"
     },
     {
       icon: Cog,
-      title: "Business Process Optimization",
-      description: "Automate critical processes across automotive, finance, sales, logistics, and customer support. We build complex product configurators with rules engines, streamline procurement and purchasing, and optimize checkout experiences for maximum efficiency.",
+      title: "Business Process Engineering",
+      description: "Optimize critical processes across automotive, finance, sales, logistics, and customer support. Complex product configurators with rules engines, automated procurement, and checkout optimization for measurable ROI.",
       link: "#services"
     },
     {
       icon: ShoppingCart,
-      title: "Software & E-Commerce Development",
-      description: "Complete end-to-end (0 to 1) software development for internal and customer-facing tools. Expert e-commerce solutions on Shopify, Magento, Saleor, Medusa, and Adobe Commerce, plus electronic data interchange and data-as-a-product services.",
+      title: "Enterprise Software & E-Commerce",
+      description: "Complete 0-to-1 software development for internal and customer-facing tools. Expert implementations on Shopify, Magento, Saleor, Adobe Commerce. EDI integration and data-as-a-product platforms for digital-first businesses.",
       link: "#services"
     },
     {
       icon: Cloud,
-      title: "Cloud & IoT Solutions",
-      description: "Seamless cloud migrations (public/private), infrastructure management, and IoT project implementation. Specializing in digital twins, EV charger management (roaming, billing, CRM), and cutting-edge Web3 integration for future-ready businesses.",
+      title: "Cloud, IoT & Digital Twin",
+      description: "Cloud migrations (AWS, Azure, GCP), infrastructure management, and IoT implementation. Specializing in digital twins, EV charger management (roaming, billing, CRM), and Web3 integration for connected ecosystems.",
       link: "#services"
     }
   ];
@@ -37,11 +37,16 @@ const ServiceOverview = () => {
       
       <div className="container mx-auto relative z-10">
         <div className="text-center mb-16 animate-slide-up">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
-            Our Services
+          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
+            <span className="text-sm font-medium text-primary">Core Capabilities</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-primary-light to-primary bg-clip-text text-transparent">
+            Digital Transformation Services
           </h2>
+          <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Comprehensive solutions tailored for small and medium businesses ready to scale
+            Enterprise-grade solutions across AI, Automation, IoT, Cloud, DevOps, and Digital Twin technologies. 
+            From consultation to implementation and operations.
           </p>
         </div>
 

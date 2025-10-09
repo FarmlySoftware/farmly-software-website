@@ -38,6 +38,12 @@ const Header = () => {
               About
             </button>
             <button
+              onClick={() => scrollToSection('why-choose-us')}
+              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
+            >
+              Why Us
+            </button>
+            <button
               onClick={() => scrollToSection('services')}
               className="text-muted-foreground hover:text-primary transition-smooth text-sm"
             >
@@ -48,12 +54,6 @@ const Header = () => {
               className="text-muted-foreground hover:text-primary transition-smooth text-sm"
             >
               Projects
-            </button>
-            <button
-              onClick={() => scrollToSection('process')}
-              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-            >
-              Process
             </button>
             <button
               onClick={() => scrollToSection('contact')}
@@ -104,6 +104,12 @@ const Header = () => {
                 About
               </button>
               <button
+                onClick={() => scrollToSection('why-choose-us')}
+                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
+              >
+                Why Us
+              </button>
+              <button
                 onClick={() => scrollToSection('services')}
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
               >
@@ -114,12 +120,6 @@ const Header = () => {
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
               >
                 Projects
-              </button>
-              <button
-                onClick={() => scrollToSection('process')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
-              >
-                Process
               </button>
               <button
                 onClick={() => scrollToSection('contact')}

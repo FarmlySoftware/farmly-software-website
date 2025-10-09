@@ -241,12 +241,13 @@ const Contact = () => {
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="ai-automation">AI & Automation</SelectItem>
-                          <SelectItem value="iot-automation">IoT & Automation</SelectItem>
-                          <SelectItem value="ecommerce">E-Commerce Solutions</SelectItem>
-                          <SelectItem value="cloud-infrastructure">Cloud & Infrastructure</SelectItem>
-                          <SelectItem value="custom-development">Custom Development</SelectItem>
-                          <SelectItem value="maintenance-operations">Maintenance & Operations</SelectItem>
+                          <SelectItem value="ai-automation">AI & Agentic Automation</SelectItem>
+                          <SelectItem value="business-optimization">Business Process Engineering</SelectItem>
+                          <SelectItem value="software-ecommerce">Enterprise Software & E-Commerce</SelectItem>
+                          <SelectItem value="cloud-iot">Cloud, IoT & Digital Twin</SelectItem>
+                          <SelectItem value="devops-devsecops">DevOps & DevSecOps</SelectItem>
+                          <SelectItem value="ev-charging">EV Charging Management</SelectItem>
+                          <SelectItem value="digital-transformation">Digital Transformation Consulting</SelectItem>
                           <SelectItem value="consultation">Free Consultation</SelectItem>
                         </SelectContent>
                       </Select>
