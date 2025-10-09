@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-webdev.jpg";
+import InteractiveBackground from "@/components/background/InteractiveBackground";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -10,27 +11,25 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
-      {/* Animated Background */}
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Interactive Canvas Background */}
+      <InteractiveBackground />
+      
+      {/* Animated Background Layers */}
       <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Modern web development workspace with multiple screens showing beautiful websites"
-          className="w-full h-full object-cover opacity-20"
-          loading="eager"
-        />
-        <div className="absolute inset-0 bg-gradient-hero opacity-90 animate-gradient"></div>
+        <div className="absolute inset-0 bg-gradient-hero opacity-95 animate-gradient"></div>
         
-        {/* Floating Geometric Shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-40 h-40 bg-primary-light/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/3 w-24 h-24 bg-primary/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }}></div>
-        
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: 'linear-gradient(hsl(var(--primary-foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-foreground)) 1px, transparent 1px)',
-          backgroundSize: '50px 50px'
+        {/* Dynamic Grid Pattern */}
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+          backgroundImage: 'linear-gradient(hsl(var(--primary-light)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-light)) 1px, transparent 1px)',
+          backgroundSize: '60px 60px'
         }}></div>
+
+        {/* Floating Organic Shapes */}
+        <div className="absolute top-20 left-10 w-40 h-40 bg-primary-light/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-52 h-52 bg-primary-dark/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-1/3 right-1/4 w-36 h-36 bg-primary-light/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
       </div>
 
       {/* Content */}
@@ -41,15 +40,15 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Building Tomorrow's Solutions,
-            <span className="block mt-2 bg-gradient-to-r from-primary-foreground to-primary-foreground/70 bg-clip-text text-transparent">
-              Today
+            Cultivating Digital Excellence,
+            <span className="block mt-2 bg-gradient-to-r from-primary-foreground via-primary-foreground/90 to-primary-foreground/70 bg-clip-text text-transparent animate-gradient">
+              Growing Future Success
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Future-ready AI-powered solutions, intelligent automation, and cutting-edge development 
-            that transforms businesses across industries.
+            Pioneering AI-driven innovation, intelligent automation, and transformative consulting 
+            across Automotive, E-Commerce, Media, Telecom, Logistics, and EV Charging industries.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

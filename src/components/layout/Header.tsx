@@ -19,32 +19,44 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-primary">Farmly Softwares</h1>
+            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">Farmly</h1>
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6">
             <button
               onClick={() => scrollToSection('home')}
-              className="text-muted-foreground hover:text-primary transition-smooth"
+              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-muted-foreground hover:text-primary transition-smooth"
+              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('services')}
-              className="text-muted-foreground hover:text-primary transition-smooth"
+              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
             >
               Services
             </button>
             <button
+              onClick={() => scrollToSection('projects')}
+              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
+            >
+              Projects
+            </button>
+            <button
+              onClick={() => scrollToSection('process')}
+              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
+            >
+              Process
+            </button>
+            <button
               onClick={() => scrollToSection('contact')}
-              className="text-muted-foreground hover:text-primary transition-smooth"
+              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
             >
               Contact
             </button>
@@ -95,6 +107,18 @@ const Header = () => {
                 className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
               >
                 Services
+              </button>
+              <button
+                onClick={() => scrollToSection('projects')}
+                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
+              >
+                Projects
+              </button>
+              <button
+                onClick={() => scrollToSection('process')}
+                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
+              >
+                Process
               </button>
               <button
                 onClick={() => scrollToSection('contact')}
