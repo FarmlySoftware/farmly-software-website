@@ -1,167 +1,116 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Search, Globe, TrendingUp, MapPin, Star, Users } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Search, Target, TrendingUp, Globe, BarChart, Zap } from "lucide-react";
 
 const SEOOptimization = () => {
   const seoFeatures = [
     {
       icon: Search,
-      title: "Advanced SEO Setup",
-      description: "Complete on-page optimization with meta tags, structured data, and keyword optimization",
-      features: ["Meta titles & descriptions", "Header tag optimization", "Image alt texts", "Schema markup"]
+      title: "SEO-First Development",
+      description: "Every project built with search engine optimization at its core",
+      gradient: "from-primary to-primary-dark"
+    },
+    {
+      icon: Target,
+      title: "Technical SEO Excellence",
+      description: "Clean URLs, proper schema markup, and optimized site structure",
+      gradient: "from-primary-dark to-primary-light"
     },
     {
       icon: TrendingUp,
       title: "Performance Optimization",
-      description: "Fast-loading websites that rank higher in search results",
-      features: ["Code minification", "Image compression", "Lazy loading", "Core Web Vitals optimization"]
+      description: "Lightning-fast load times for better rankings and user experience",
+      gradient: "from-primary-light to-primary"
     },
     {
       icon: Globe,
-      title: "Technical SEO",
-      description: "Technical foundation for better search engine visibility",
-      features: ["XML sitemaps", "Robots.txt optimization", "Canonical URLs", "Mobile-first indexing"]
+      title: "Multi-Device Responsive",
+      description: "Mobile-first approach ensuring perfect experience on all devices",
+      gradient: "from-primary to-accent"
     },
     {
-      icon: MapPin,
-      title: "Local SEO Integration",
-      description: "Boost your local search presence and attract nearby customers",
-      features: ["Google My Business setup", "Local schema markup", "NAP consistency", "Location-based keywords"]
+      icon: BarChart,
+      title: "Analytics Integration",
+      description: "GA4, LinkedIn Pixel, and custom tracking for data-driven insights",
+      gradient: "from-accent to-primary-dark"
+    },
+    {
+      icon: Zap,
+      title: "Continuous Improvement",
+      description: "Ongoing optimization based on performance metrics and user data",
+      gradient: "from-primary-dark to-accent"
     }
   ];
 
-  const keywords = [
-    "website development India",
-    "affordable web hosting",
-    "SEO optimized websites",
-    "business website design",
-    "e-commerce development",
-    "responsive web design",
-    "website maintenance services",
-    "web development company Delhi"
-  ];
-
   return (
-    <section className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="seo" className="py-20 bg-muted/30 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-[0.02]">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)',
+          backgroundSize: '40px 40px'
+        }}></div>
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            SEO-Optimized for Success
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-slide-up">
+          <div className="inline-block mb-4 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
+            <span className="text-sm font-medium text-primary">Performance & Discoverability</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+            Built for Speed & Search Engines
           </h2>
-          <div className="w-20 h-1 bg-gradient-primary rounded-full mx-auto mb-6"></div>
-          <p className="text-lg text-muted-foreground">
-            Every website we build is optimized for search engines from day one. 
-            Get found by your customers with our comprehensive SEO approach.
+          <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6 animate-gradient"></div>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Every solution we build is optimized for performance, accessibility, and search engine rankings to maximize your digital presence and ROI.
           </p>
         </div>
 
-        {/* SEO Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {seoFeatures.map((feature, index) => (
-            <Card key={index} className="border-border hover:shadow-custom-md transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-center space-x-3 mb-3">
-                  <div className="p-2 bg-gradient-primary rounded-lg">
-                    <feature.icon className="h-6 w-6 text-primary-foreground" />
-                  </div>
-                  <CardTitle className="text-xl text-foreground">{feature.title}</CardTitle>
-                </div>
-                <CardDescription className="text-muted-foreground">
-                  {feature.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                  {feature.features.map((item, i) => (
-                    <div key={i} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                      <span className="text-sm text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Target Keywords */}
-        <div className="bg-gradient-card rounded-lg border border-border p-8 mb-16">
-          <h3 className="text-2xl font-bold text-foreground mb-4 text-center">
-            Target Keywords We Optimize For
-          </h3>
-          <div className="flex flex-wrap justify-center gap-3">
-            {keywords.map((keyword, index) => (
-              <Badge 
-                key={index} 
-                variant="secondary" 
-                className="px-4 py-2 text-sm bg-primary/10 text-primary border border-primary/20"
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {seoFeatures.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <Card 
+                key={feature.title}
+                className="group border-border hover:border-primary/40 transition-all duration-300 hover:shadow-custom-lg hover:-translate-y-2 overflow-hidden"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {keyword}
-              </Badge>
-            ))}
-          </div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                
+                <CardContent className="p-6 relative">
+                  <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${feature.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-md`}>
+                    <Icon className="w-7 h-7 text-primary-foreground" />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
-        {/* Local SEO Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-foreground">
-              Local SEO & Google Business Integration
-            </h3>
-            <p className="text-muted-foreground">
-              Dominate local search results with our comprehensive local SEO strategy. 
-              We help your business appear in Google Maps and local search queries.
-            </p>
-            
-            <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <Star className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-foreground">Google My Business Optimization</h4>
-                  <p className="text-sm text-muted-foreground">Complete profile setup with photos, reviews, and regular updates</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-foreground">Review Management Strategy</h4>
-                  <p className="text-sm text-muted-foreground">Tools and guidance for collecting and managing customer reviews</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <MapPin className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
-                <div>
-                  <h4 className="font-semibold text-foreground">Local Citation Building</h4>
-                  <p className="text-sm text-muted-foreground">Consistent NAP (Name, Address, Phone) across all platforms</p>
-                </div>
-              </div>
+        {/* Performance Metrics */}
+        <div className="mt-16 max-w-5xl mx-auto bg-gradient-card rounded-2xl border border-primary/20 p-8 md:p-12">
+          <h3 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-10">
+            Our Performance Standards
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="text-5xl font-bold text-primary mb-2 neon-text-subtle">90+</div>
+              <div className="text-sm text-muted-foreground">Lighthouse Score</div>
             </div>
-          </div>
-
-          <div className="bg-gradient-card rounded-lg border border-border p-6">
-            <h4 className="text-lg font-semibold text-foreground mb-4">Our Location</h4>
-            <div className="aspect-video rounded-lg overflow-hidden bg-muted">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.06396406817!2d77.04417!3d28.527554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1640000000000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="WebCraft Consultants Location - New Delhi, India"
-              ></iframe>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-primary mb-2 neon-text-subtle">&lt;2s</div>
+              <div className="text-sm text-muted-foreground">Page Load Time</div>
             </div>
-            <div className="mt-4 space-y-2">
-              <p className="text-sm text-muted-foreground">
-                <strong className="text-foreground">Address:</strong> New Delhi, India
-              </p>
-              <p className="text-sm text-muted-foreground">
-                <strong className="text-foreground">Service Area:</strong> Pan India
-              </p>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-primary mb-2 neon-text-subtle">100%</div>
+              <div className="text-sm text-muted-foreground">Mobile Responsive</div>
             </div>
           </div>
         </div>
