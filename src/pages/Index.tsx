@@ -8,12 +8,15 @@ import Projects from "@/components/sections/Projects";
 import ProcessExcellence from "@/components/sections/ProcessExcellence";
 import AIOptimization from "@/components/sections/AIOptimization";
 import Contact from "@/components/sections/Contact";
+import SkipToContent from "@/components/ui/skip-to-content";
+import MotionToggle from "@/components/ui/motion-toggle";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SkipToContent />
       <Header />
-      <main>
+      <main id="main-content" role="main">
         <Hero />
         <ServiceOverview />
         <About />
@@ -24,6 +27,7 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
+      <MotionToggle />
     </div>
   );
 };

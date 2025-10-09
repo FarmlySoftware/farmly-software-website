@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero section">
       {/* Interactive Canvas Background */}
       <InteractiveBackground />
       
@@ -40,15 +40,15 @@ const Hero = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Cultivating Digital Excellence,
+            Empowering Small & Medium Businesses to Thrive
             <span className="block mt-2 bg-gradient-to-r from-primary-foreground via-primary-foreground/90 to-primary-foreground/70 bg-clip-text text-transparent animate-gradient">
-              Growing Future Success
+              with Smart Innovation
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Pioneering AI-driven innovation, intelligent automation, and transformative consulting 
-            across Automotive, E-Commerce, Media, Telecom, Logistics, and EV Charging industries.
+          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Innovative AI, automation, and software solutions that transform your business operations 
+            with scalable, practical technology designed for growth.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -57,8 +57,9 @@ const Hero = () => {
               size="xl"
               onClick={scrollToContact}
               className="w-full sm:w-auto min-w-[200px]"
+              aria-label="Get in touch with us"
             >
-              Get Started Today
+              Get in Touch
             </Button>
             
             <Button

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useMotion } from '@/contexts/MotionContext';
 
 interface Particle {
   x: number;
@@ -16,8 +17,10 @@ const InteractiveBackground = () => {
   const particlesRef = useRef<Particle[]>([]);
   const mouseRef = useRef({ x: 0, y: 0 });
   const animationFrameRef = useRef<number>();
+  const { prefersReducedMotion } = useMotion();
 
   useEffect(() => {
+    if (prefersReducedMotion) return; // Don't animate if reduced motion is preferred
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -139,13 +142,15 @@ const InteractiveBackground = () => {
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, []);
+  }, [prefersReducedMotion]);
 
   return (
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0"
       style={{ background: 'transparent' }}
+      aria-hidden="true"
+      role="presentation"
     />
   );
 };
