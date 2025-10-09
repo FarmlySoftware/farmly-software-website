@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-webdev.jpg";
-import InteractiveBackground from "@/components/background/InteractiveBackground";
+import FuturisticBackground from "@/components/background/FuturisticBackground";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -12,43 +11,46 @@ const Hero = () => {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero section">
-      {/* Interactive Canvas Background */}
-      <InteractiveBackground />
+      {/* Futuristic Interactive Background */}
+      <FuturisticBackground />
       
-      {/* Animated Background Layers */}
+      {/* Ethereal Background Layers */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-hero opacity-95 animate-gradient"></div>
+        {/* Dark base with subtle gradient */}
+        <div className="absolute inset-0 bg-gradient-hero"></div>
         
-        {/* Dynamic Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-          backgroundImage: 'linear-gradient(hsl(var(--primary-light)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary-light)) 1px, transparent 1px)',
-          backgroundSize: '60px 60px'
+        {/* Neural network grid pattern */}
+        <div className="absolute inset-0 opacity-[0.05]" style={{
+          backgroundImage: 'linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)',
+          backgroundSize: '80px 80px'
         }}></div>
 
-        {/* Floating Organic Shapes */}
-        <div className="absolute top-20 left-10 w-40 h-40 bg-primary-light/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-52 h-52 bg-primary-dark/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/3 w-32 h-32 bg-primary/10 rounded-full blur-2xl animate-float" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute bottom-1/3 right-1/4 w-36 h-36 bg-primary-light/15 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+        {/* Glowing orbs - ethereal effect */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[100px] animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-accent/8 rounded-full blur-[120px] animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-primary/8 rounded-full blur-[90px] animate-float" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-accent/6 rounded-full blur-[100px] animate-float" style={{ animationDelay: '3s' }}></div>
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto text-center animate-slide-up">
-          <div className="inline-block mb-4 px-4 py-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full border border-primary-foreground/20">
-            <span className="text-sm font-medium text-primary-foreground">🚀 Innovation Meets Intelligence</span>
+          <div className="inline-block mb-6 px-5 py-2 bg-card/40 backdrop-blur-md rounded-full border border-primary/30 shadow-glow">
+            <span className="text-sm font-medium text-primary neon-text-subtle">🚀 Next-Gen Technology Solutions</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
-            Empowering Small & Medium Businesses to Thrive
-            <span className="block mt-2 bg-gradient-to-r from-primary-foreground via-primary-foreground/90 to-primary-foreground/70 bg-clip-text text-transparent animate-gradient">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+            <span className="block text-foreground neon-text">
+              Empowering Businesses
+            </span>
+            <span className="block mt-3 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent neon-text">
               with Smart Innovation
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Innovative AI, automation, and software solutions that transform your business operations 
-            with scalable, practical technology designed for growth.
+          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
+            Cutting-edge AI, automation, and software solutions that transform operations 
+            with scalable, intelligent technology for the digital future.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
