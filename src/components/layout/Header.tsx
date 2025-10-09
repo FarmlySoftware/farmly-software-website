@@ -1,145 +1,104 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sparkles } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+    element?.scrollIntoView({ behavior: 'smooth' });
+    setIsMenuOpen(false);
   };
 
+  const navLinks = [
+    { label: "Services", id: "service-overview" },
+    { label: "About", id: "about" },
+    { label: "Why Us", id: "why-choose-us" },
+    { label: "Projects", id: "projects" },
+    { label: "Process", id: "process" },
+    { label: "Contact", id: "contact" },
+  ];
+
   return (
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur-sm border-b border-border z-50" role="banner">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-primary/10">
+      <nav className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">Farmly</h1>
-          </div>
+          <button
+            onClick={() => scrollToSection('main-content')}
+            className="flex items-center gap-2 group"
+            aria-label="Home"
+          >
+            <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Sparkles className="w-5 h-5 text-background" />
+            </div>
+            <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              Farmly
+            </span>
+          </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6" role="navigation" aria-label="Main navigation">
-            <button
-              onClick={() => scrollToSection('home')}
-              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-              aria-label="Navigate to home section"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-            >
-              About
-            </button>
-            <button
-              onClick={() => scrollToSection('why-choose-us')}
-              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-            >
-              Why Us
-            </button>
-            <button
-              onClick={() => scrollToSection('services')}
-              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-            >
-              Services
-            </button>
-            <button
-              onClick={() => scrollToSection('projects')}
-              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-            >
-              Projects
-            </button>
-            <button
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative group"
+              >
+                {link.label}
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span>
+              </button>
+            ))}
+            <Button 
+              variant="hero" 
+              size="sm"
               onClick={() => scrollToSection('contact')}
-              className="text-muted-foreground hover:text-primary transition-smooth text-sm"
-            >
-              Contact
-            </button>
-          </nav>
-
-          {/* CTA Button - Desktop */}
-          <div className="hidden md:block">
-            <Button
-              variant="cta"
-              onClick={() => scrollToSection('contact')}
-              className="shadow-custom-md"
+              className="ml-4"
             >
               Get Started
             </Button>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 hover:bg-primary/10 rounded-lg transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <X className="w-6 h-6 text-foreground" />
+            ) : (
+              <Menu className="w-6 h-6 text-foreground" />
+            )}
+          </button>
         </div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 border-t border-border bg-background">
+          <div className="md:hidden py-4 space-y-2 border-t border-primary/10">
+            {navLinks.map((link) => (
               <button
-                onClick={() => scrollToSection('home')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
+                key={link.id}
+                onClick={() => scrollToSection(link.id)}
+                className="block w-full text-left px-4 py-3 text-sm font-medium text-foreground/80 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
               >
-                Home
+                {link.label}
               </button>
-              <button
-                onClick={() => scrollToSection('about')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
-              >
-                About
-              </button>
-              <button
-                onClick={() => scrollToSection('why-choose-us')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
-              >
-                Why Us
-              </button>
-              <button
-                onClick={() => scrollToSection('services')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
-              >
-                Services
-              </button>
-              <button
-                onClick={() => scrollToSection('projects')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
-              >
-                Projects
-              </button>
-              <button
+            ))}
+            <div className="px-4 pt-2">
+              <Button 
+                variant="hero" 
+                size="sm"
                 onClick={() => scrollToSection('contact')}
-                className="block px-3 py-2 text-muted-foreground hover:text-primary transition-smooth w-full text-left"
+                className="w-full"
               >
-                Contact
-              </button>
-              <div className="px-3 py-2">
-                <Button
-                  variant="cta"
-                  onClick={() => scrollToSection('contact')}
-                  className="w-full"
-                >
-                  Get Started
-                </Button>
-              </div>
+                Get Started
+              </Button>
             </div>
           </div>
         )}
-      </div>
+      </nav>
     </header>
   );
 };

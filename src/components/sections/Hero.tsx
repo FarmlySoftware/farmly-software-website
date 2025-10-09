@@ -1,107 +1,117 @@
 import { Button } from "@/components/ui/button";
-import FuturisticBackground from "@/components/background/FuturisticBackground";
+import { ArrowRight, Sparkles, TrendingUp, Shield } from "lucide-react";
+import { useMotion } from "@/contexts/MotionContext";
+
+const scrollToContact = () => {
+  const contactSection = document.getElementById('contact');
+  contactSection?.scrollIntoView({ behavior: 'smooth' });
+};
+
+const scrollToProjects = () => {
+  const projectsSection = document.getElementById('projects');
+  projectsSection?.scrollIntoView({ behavior: 'smooth' });
+};
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const { prefersReducedMotion } = useMotion();
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden" aria-label="Hero section">
-      {/* Futuristic Interactive Background */}
-      <FuturisticBackground />
-      
-      {/* Ethereal Background Layers */}
-      <div className="absolute inset-0 z-0">
-        {/* Dark base with subtle gradient */}
-        <div className="absolute inset-0 bg-gradient-hero"></div>
-        
-        {/* Neural network grid pattern */}
-        <div className="absolute inset-0 opacity-[0.05]" style={{
-          backgroundImage: 'linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)',
-          backgroundSize: '80px 80px'
-        }}></div>
-
-        {/* Glowing orbs - ethereal effect */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/10 rounded-full blur-[100px] animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-accent/8 rounded-full blur-[120px] animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-primary/8 rounded-full blur-[90px] animate-float" style={{ animationDelay: '4s' }}></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-accent/6 rounded-full blur-[100px] animate-float" style={{ animationDelay: '3s' }}></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Animated Tech Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-background to-card">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMzYjgyZjYiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PHBhdGggZD0iTTM2IDE4YzAtOS45NCAwLTE4IDE4LTE4czE4IDguMDYgMTggMTgtOC4wNiAxOC0xOCAxOEgzNnpNMCA0MmMwIDkuOTQgMCAxOCAxOCAxOHMxOC04LjA2IDE4LTE4SDB6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-20"></div>
+        {!prefersReducedMotion && (
+          <>
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse-glow"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }}></div>
+          </>
+        )}
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto text-center animate-slide-up">
-          <div className="inline-block mb-6 px-5 py-2 bg-card/40 backdrop-blur-md rounded-full border border-primary/30 shadow-glow">
-            <span className="text-sm font-medium text-primary neon-text-subtle">🚀 Enterprise Digital Transformation</span>
+      <div className="relative z-10 container mx-auto px-4 py-20">
+        <div className="max-w-5xl mx-auto text-center">
+          {/* Badge */}
+          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 ${!prefersReducedMotion ? 'animate-slide-up' : ''}`}>
+            <Sparkles className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">Next-Generation Digital Transformation</span>
           </div>
-          
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
-            <span className="block text-foreground neon-text">
-              Engineering the Future of
-            </span>
-            <span className="block mt-3 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent neon-text">
+
+          {/* Main Headline */}
+          <h1 className={`text-5xl md:text-7xl font-bold mb-6 ${!prefersReducedMotion ? 'animate-slide-up tech-glow-subtle' : ''}`}
+              style={{ animationDelay: '0.1s' }}>
+            Engineering the Future of
+            <span className="block mt-2 bg-gradient-primary bg-clip-text text-transparent">
               Intelligent Automation
             </span>
           </h1>
-          
-          <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
-            We help enterprises evolve through AI, IoT, Cloud, and Automation — from concept to scale. 
-            <strong className="text-foreground"> 30–90% efficiency gains</strong> with Fortune 500 proven expertise.
+
+          {/* Subtext */}
+          <p className={`text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto ${!prefersReducedMotion ? 'animate-slide-up' : ''}`}
+             style={{ animationDelay: '0.2s' }}>
+            We help enterprises evolve through AI, IoT, Cloud, and Automation — from concept to scale
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              variant="hero"
-              size="xl"
+          {/* CTA Buttons */}
+          <div className={`flex flex-col sm:flex-row gap-4 justify-center mb-16 ${!prefersReducedMotion ? 'animate-slide-up' : ''}`}
+               style={{ animationDelay: '0.3s' }}>
+            <Button 
+              variant="hero" 
+              size="xl" 
               onClick={scrollToContact}
-              className="w-full sm:w-auto min-w-[200px]"
-              aria-label="Get in touch with us"
+              className="group"
             >
-              Get in Touch
+              Get Consultation
+              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            
-            <Button
-              variant="outline"
+            <Button 
+              variant="outline" 
               size="xl"
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="w-full sm:w-auto min-w-[200px] border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+              onClick={scrollToProjects}
+              className="border-primary/20 hover:border-primary/40 hover:bg-primary/5"
             >
-              View Services
+              View Case Studies
             </Button>
           </div>
 
-          {/* Key Features */}
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="group flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300 hover:scale-105 future-glow">
-              <div className="w-3 h-3 bg-primary-foreground rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-primary-foreground">10+ Years Experience</span>
+          {/* Key Metrics */}
+          <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto ${!prefersReducedMotion ? 'animate-slide-up' : ''}`}
+               style={{ animationDelay: '0.4s' }}>
+            <div className="flex flex-col items-center p-6 rounded-xl bg-card/50 border border-primary/10 backdrop-blur-sm hover:border-primary/30 transition-all">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                <TrendingUp className="w-6 h-6 text-primary" />
+              </div>
+              <div className="text-3xl font-bold text-primary mb-2">10+</div>
+              <div className="text-sm text-muted-foreground">Years of Enterprise Excellence</div>
             </div>
-            <div className="group flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300 hover:scale-105 future-glow" style={{ animationDelay: '0.1s' }}>
-              <div className="w-3 h-3 bg-primary-foreground rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-primary-foreground">Fortune 500 Trusted</span>
+
+            <div className="flex flex-col items-center p-6 rounded-xl bg-card/50 border border-primary/10 backdrop-blur-sm hover:border-primary/30 transition-all">
+              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
+                <Sparkles className="w-6 h-6 text-accent" />
+              </div>
+              <div className="text-3xl font-bold text-accent mb-2">90%</div>
+              <div className="text-sm text-muted-foreground">Process Automation Achieved</div>
             </div>
-            <div className="group flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300 hover:scale-105 future-glow" style={{ animationDelay: '0.2s' }}>
-              <div className="w-3 h-3 bg-primary-foreground rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-primary-foreground">End-to-End Delivery</span>
-            </div>
-            <div className="group flex flex-col items-center justify-center space-y-2 p-4 rounded-lg bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300 hover:scale-105 future-glow" style={{ animationDelay: '0.3s' }}>
-              <div className="w-3 h-3 bg-primary-foreground rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium text-primary-foreground">30-90% ROI Gains</span>
+
+            <div className="flex flex-col items-center p-6 rounded-xl bg-card/50 border border-primary/10 backdrop-blur-sm hover:border-primary/30 transition-all">
+              <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center mb-4">
+                <Shield className="w-6 h-6 text-success" />
+              </div>
+              <div className="text-3xl font-bold text-success mb-2">Fortune 500</div>
+              <div className="text-sm text-muted-foreground">Trusted by Global Leaders</div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-primary-foreground/50 rounded-full mt-2"></div>
+      {!prefersReducedMotion && (
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-primary/30 rounded-full p-1">
+            <div className="w-1.5 h-3 bg-primary rounded-full mx-auto animate-pulse"></div>
+          </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };

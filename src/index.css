@@ -47,78 +47,78 @@
   }
 }
 
-/* Farmly Design System - Agriculture-Inspired Green Theme */
+/* Enterprise Design System - Modern B2B Tech Theme */
 
 @layer base {
   :root {
-    /* Dark Futuristic Theme - Emerald and Olive Green */
-    --background: 220 27% 8%;
-    --foreground: 160 20% 92%;
-    --card: 220 25% 12%;
-    --card-foreground: 160 20% 92%;
-    --popover: 220 25% 12%;
-    --popover-foreground: 160 20% 92%;
+    /* Professional Dark Theme - Blue & Cyan Tech */
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
     
-    /* Primary - Emerald Green */
-    --primary: 150 80% 45%;
-    --primary-foreground: 220 27% 8%;
-    --primary-light: 88 80% 55%;
-    --primary-dark: 150 50% 35%;
+    /* Primary - Electric Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 222 47% 4%;
+    --primary-light: 199 89% 48%;
+    --primary-dark: 221 83% 53%;
     
     /* Secondary & Muted */
-    --secondary: 220 20% 20%;
-    --secondary-foreground: 160 20% 92%;
-    --muted: 220 20% 18%;
-    --muted-foreground: 160 10% 60%;
+    --secondary: 215 25% 27%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 215 20% 20%;
+    --muted-foreground: 217 10% 65%;
     
-    /* Accent - Lime/Olive */
-    --accent: 88 80% 55%;
-    --accent-foreground: 220 27% 8%;
+    /* Accent - Cyan */
+    --accent: 189 94% 43%;
+    --accent-foreground: 222 47% 4%;
     
     /* Status */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 160 20% 92%;
+    --destructive-foreground: 210 40% 98%;
     --success: 142 76% 36%;
-    --success-foreground: 160 20% 92%;
+    --success-foreground: 210 40% 98%;
     
     /* Borders */
-    --border: 220 20% 22%;
-    --input: 220 20% 22%;
-    --ring: 150 80% 45%;
+    --border: 215 25% 18%;
+    --input: 215 25% 18%;
+    --ring: 217 91% 60%;
 
-    /* Futuristic Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(150, 80%, 45%), hsl(88, 80%, 55%));
-    --gradient-hero: linear-gradient(135deg, hsl(220, 27%, 8%) 0%, hsl(220, 25%, 15%) 50%, hsl(220, 27%, 8%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(220, 25%, 12%) 0%, hsl(220, 20%, 15%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(88, 80%, 55%), hsl(150, 80%, 45%));
-    --gradient-neural: radial-gradient(circle at 50% 50%, hsl(150, 80%, 45%) 0%, transparent 70%);
+    /* Professional Tech Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217, 91%, 60%), hsl(189, 94%, 43%));
+    --gradient-hero: linear-gradient(135deg, hsl(222, 47%, 4%) 0%, hsl(222, 47%, 8%) 50%, hsl(222, 47%, 4%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(222, 47%, 8%) 0%, hsl(215, 25%, 12%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(189, 94%, 43%), hsl(217, 91%, 60%));
+    --gradient-mesh: radial-gradient(circle at 50% 50%, hsl(217, 91%, 60%) 0%, transparent 70%);
 
-    /* Neon Glow Shadows */
-    --shadow-sm: 0 1px 2px 0 rgba(16, 185, 129, 0.15);
-    --shadow-md: 0 4px 6px -1px rgba(16, 185, 129, 0.2), 0 2px 4px -1px rgba(16, 185, 129, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(16, 185, 129, 0.25), 0 4px 6px -2px rgba(16, 185, 129, 0.1);
-    --shadow-hero: 0 20px 25px -5px rgba(16, 185, 129, 0.3), 0 10px 10px -5px rgba(16, 185, 129, 0.15);
-    --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.6), 0 0 60px rgba(139, 195, 74, 0.4);
-    --shadow-neon: 0 0 10px rgba(16, 185, 129, 0.8), 0 0 20px rgba(16, 185, 129, 0.6), 0 0 30px rgba(16, 185, 129, 0.4);
+    /* Tech Glow Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(59, 130, 246, 0.15);
+    --shadow-md: 0 4px 6px -1px rgba(59, 130, 246, 0.2), 0 2px 4px -1px rgba(59, 130, 246, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(59, 130, 246, 0.25), 0 4px 6px -2px rgba(59, 130, 246, 0.1);
+    --shadow-hero: 0 20px 25px -5px rgba(59, 130, 246, 0.3), 0 10px 10px -5px rgba(59, 130, 246, 0.15);
+    --shadow-glow: 0 0 30px rgba(59, 130, 246, 0.5), 0 0 60px rgba(6, 182, 212, 0.3);
+    --shadow-neon: 0 0 10px rgba(59, 130, 246, 0.8), 0 0 20px rgba(59, 130, 246, 0.6), 0 0 30px rgba(59, 130, 246, 0.4);
 
     /* Smooth animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
-    --radius: 0.5rem;
-    --sidebar-background: 220 25% 12%;
-    --sidebar-foreground: 160 20% 92%;
-    --sidebar-primary: 150 80% 45%;
-    --sidebar-primary-foreground: 220 27% 8%;
-    --sidebar-accent: 220 20% 18%;
-    --sidebar-accent-foreground: 160 20% 92%;
-    --sidebar-border: 220 20% 22%;
-    --sidebar-ring: 150 80% 45%;
+    --radius: 0.75rem;
+    --sidebar-background: 222 47% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 222 47% 4%;
+    --sidebar-accent: 215 20% 20%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 215 25% 18%;
+    --sidebar-ring: 217 91% 60%;
   }
 
   .dark {
-    --background: 220 27% 8%;
-    --foreground: 160 20% 92%;
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
   }
 }
 
@@ -130,22 +130,22 @@
   body {
     @apply bg-background text-foreground;
     background-image: 
-      radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(139, 195, 74, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 40% 20%, rgba(16, 185, 129, 0.02) 0%, transparent 50%);
+      radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(59, 130, 246, 0.02) 0%, transparent 50%);
   }
   
-  /* Neon text glow effect */
-  .neon-text {
-    text-shadow: 0 0 10px rgba(16, 185, 129, 0.8),
-                 0 0 20px rgba(16, 185, 129, 0.6),
-                 0 0 30px rgba(16, 185, 129, 0.4),
-                 0 0 40px rgba(16, 185, 129, 0.2);
+  /* Tech glow effect */
+  .tech-glow {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.8),
+                 0 0 20px rgba(59, 130, 246, 0.6),
+                 0 0 30px rgba(59, 130, 246, 0.4),
+                 0 0 40px rgba(59, 130, 246, 0.2);
   }
   
-  .neon-text-subtle {
-    text-shadow: 0 0 10px rgba(16, 185, 129, 0.4),
-                 0 0 20px rgba(16, 185, 129, 0.2);
+  .tech-glow-subtle {
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.4),
+                 0 0 20px rgba(59, 130, 246, 0.2);
   }
 
   /* Interactive & Future-Ready Animations */
