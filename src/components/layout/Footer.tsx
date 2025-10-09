@@ -19,7 +19,7 @@ const Footer = () => {
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Information */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">Farmly</h3>
+            <h3 className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">Farmly Softwares</h3>
             <p className="text-sm text-muted-foreground">
               Empowering small and medium-scale businesses with innovative AI, automation, and software solutions.
             </p>
@@ -167,7 +167,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} Farmly. All rights reserved.
+            © {currentYear} Farmly Softwares. All rights reserved.
           </div>
           
           <div className="flex space-x-6 text-sm text-muted-foreground">

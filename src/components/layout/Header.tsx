@@ -34,7 +34,7 @@ const Header = () => {
               <Sparkles className="w-5 h-5 text-background" />
             </div>
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Farmly
+              Farmly Softwares
             </span>
           </button>
 

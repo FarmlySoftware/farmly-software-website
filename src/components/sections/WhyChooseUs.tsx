@@ -28,12 +28,6 @@ const WhyChooseUs = () => {
       gradient: "from-primary to-accent"
     },
     {
-      icon: Shield,
-      title: "Trusted by Global Enterprises",
-      description: "BMW, Vodafone, Bosch, SAP, Deutsche Telekom and many more",
-      gradient: "from-accent to-primary-dark"
-    },
-    {
       icon: Zap,
       title: "Agile, AI-First Culture",
       description: "Customer-centric approach with cutting-edge AI and automation expertise",
@@ -133,7 +127,7 @@ const WhyChooseUs = () => {
             <blockquote className="text-xl text-foreground italic mb-6">
               "We help enterprises evolve through AI, IoT, Cloud, and Automation — from concept to scale, with proven results and measurable ROI."
             </blockquote>
-            <div className="text-primary font-semibold">— Farmly Team</div>
+            <div className="text-primary font-semibold">— Farmly Softwares Team</div>
           </div>
         </div>
       </div>

@@ -107,7 +107,7 @@ const Services = () => {
             <span className="text-sm font-medium text-primary">Consulting & Implementation</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Our Expertise
+            Comprehensive Services
           </h2>
           <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6 animate-gradient"></div>
           <p className="text-lg text-muted-foreground leading-relaxed">
@@ -177,51 +177,6 @@ const Services = () => {
               </Card>
             );
           })}
-        </div>
-
-        {/* Delivery Methods & Approach */}
-        <div className="mt-20 bg-gradient-card rounded-2xl border border-border p-8 md:p-12">
-          <div className="text-center mb-10">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-              Our Delivery Approach
-            </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              We employ industry-leading methodologies and frameworks to ensure successful project delivery, 
-              from initial consultation through implementation and ongoing operations.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-            {[
-              { name: "Agile Development", description: "Iterative approach with rapid feedback cycles" },
-              { name: "DevOps & DevSecOps", description: "Automated deployment with security built-in" },
-              { name: "Scrum Framework", description: "Sprint-based delivery with daily collaboration" },
-              { name: "Kanban Methodology", description: "Continuous flow and visual workflow management" },
-              { name: "SAFe (Scaled Agile)", description: "Enterprise-scale Agile for complex projects" },
-              { name: "Software Architecture", description: "Robust, scalable system design principles" }
-            ].map((method, idx) => (
-              <div 
-                key={method.name}
-                className="p-5 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-md group"
-              >
-                <h4 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
-                  {method.name}
-                </h4>
-                <p className="text-sm text-muted-foreground">
-                  {method.description}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <div className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20">
-              <Check className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium text-foreground">
-                End-to-End (0 to 1) Software Execution & Architecture Excellence
-              </span>
-            </div>
-          </div>
         </div>
 
         {/* Industry Expertise Section */}

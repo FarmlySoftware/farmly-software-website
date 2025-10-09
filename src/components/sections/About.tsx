@@ -11,7 +11,7 @@ const About = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-slide-up">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
-            <span className="text-sm font-medium text-primary">About Farmly</span>
+            <span className="text-sm font-medium text-primary">About Farmly Softwares</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Engineering the Future of Intelligent Automation
@@ -47,7 +47,7 @@ const About = () => {
           {/* Content */}
           <div className="space-y-6">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Farmly pioneers next-generation digital transformation through cutting-edge AI, IoT, and intelligent automation. We architect tomorrow's solutions with innovation at our core, empowering industries across <strong className="text-foreground">Automotive, Energy, Finance, Retail, Telecom, and EV Charging</strong> to leap into the digital future.
+              Farmly Softwares pioneers next-generation digital transformation through cutting-edge AI, IoT, and intelligent automation. We architect tomorrow's solutions with innovation at our core, empowering industries across <strong className="text-foreground">Automotive, Energy, Finance, Retail, Telecom, and EV Charging</strong> to leap into the digital future.
             </p>
             
             <p className="text-muted-foreground leading-relaxed">
@@ -104,37 +104,6 @@ const About = () => {
                 <p className="text-sm text-muted-foreground">{value.desc}</p>
               </div>
             ))}
-          </div>
-        </div>
-
-        {/* Leadership */}
-        <div className="max-w-4xl mx-auto bg-gradient-card rounded-2xl border border-primary/20 p-8 md:p-12">
-          <h3 className="text-2xl md:text-3xl font-bold text-center text-foreground mb-8">Leadership</h3>
-          <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="flex-shrink-0">
-              <div className="w-32 h-32 rounded-full bg-gradient-primary flex items-center justify-center text-6xl shadow-glow">
-                👨‍💼
-              </div>
-            </div>
-            <div className="flex-1 text-center md:text-left">
-              <h4 className="text-2xl font-bold text-foreground mb-2">Karthik Pandian Duraipandi</h4>
-              <p className="text-lg text-primary mb-4">Senior Product & Automation Consultant</p>
-              <p className="text-muted-foreground leading-relaxed">
-                With over 10 years of enterprise product ownership experience, Karthik has led transformations for Fortune 500 clients across Automotive, Energy, Telecom, and Finance sectors. Specializing in AI, IoT, DevOps, and Cloud solutions with proven expertise in delivering 30–90% efficiency gains.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Client Logos & Certifications */}
-        <div className="mt-16 text-center">
-          <h3 className="text-xl font-bold text-muted-foreground mb-8">Trusted by Global Enterprises</h3>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <span className="text-lg font-semibold text-muted-foreground">BMW</span>
-            <span className="text-lg font-semibold text-muted-foreground">Vodafone</span>
-            <span className="text-lg font-semibold text-muted-foreground">Bosch</span>
-            <span className="text-lg font-semibold text-muted-foreground">SAP</span>
-            <span className="text-lg font-semibold text-muted-foreground">Deutsche Telekom</span>
           </div>
         </div>
       </div>
