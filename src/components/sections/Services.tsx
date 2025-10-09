@@ -9,97 +9,71 @@ const Services = () => {
       id: "ai-automation",
       name: "AI & Automation",
       icon: Zap,
-      description: "Transform your business with intelligent AI solutions and automation workflows.",
-      features: [
-        "AI-powered product recommendations",
-        "Intelligent process automation (RPA)",
-        "AI projections & forecasting",
-        "Agentic commerce & workflows",
-        "AI validation & optimization",
-        "Finance & sales automation"
+      description: "Empower your small or medium business with practical AI solutions that drive real results. We deliver custom AI implementations, industry-specific SaaS platforms, and intelligent automation that grows with you. From AI-powered projections and forecasts to product recommendations and validations, our solutions are designed for simplicity and scalability. Our robotic process automation (RPA) and agentic workflows eliminate repetitive tasks, freeing your team to focus on strategic growth. Whether you're automating customer interactions or building intelligent commerce systems, we make advanced AI accessible and affordable for businesses ready to compete in the digital age.",
+      subServices: [
+        "Custom AI Solutions & Industry SaaS",
+        "AI Projections, Forecasts & Validations",
+        "Product Suggestions & Recommendations",
+        "Robotic Process Automation (RPA)",
+        "Agentic Workflows & Automation",
+        "Agentic Commerce Systems"
       ],
       popular: true,
       gradient: "from-primary via-primary-dark to-primary-light"
     },
     {
-      id: "iot-automation",
-      name: "IoT & Automation",
-      icon: Cpu,
-      description: "Connect and automate your operations with cutting-edge IoT and industry solutions.",
-      features: [
-        "EV Charger Management with Roaming",
-        "IoT project development",
-        "Digital Twin implementation",
-        "Industry process automation",
-        "Real-time monitoring systems",
-        "Smart device integration"
+      id: "business-optimization",
+      name: "Business Process Optimization",
+      icon: Settings,
+      description: "Transform how your business operates with targeted automation solutions that streamline critical processes. We specialize in optimizing workflows across automotive, finance, sales, logistics, customer support, procurement, and purchasing operations. Our expertise extends to complex product configurators powered by sophisticated rules engines, ensuring your customers get exactly what they need. From checkout optimization that reduces cart abandonment to automated procurement systems that cut costs, we build practical solutions that deliver measurable ROI. Each implementation is designed to scale with your business, providing the foundation for sustainable growth without overwhelming complexity or cost.",
+      subServices: [
+        "Automotive Process Automation",
+        "Finance & Sales Automation",
+        "Logistics & Supply Chain Optimization",
+        "Customer Support Automation",
+        "Procurement & Purchasing Systems",
+        "Complex Product Configurators",
+        "Rules Engine Implementation",
+        "Checkout Optimization"
       ],
       popular: false,
       gradient: "from-primary-dark via-primary to-primary-light"
     },
     {
-      id: "ecommerce",
-      name: "E-Commerce Solutions",
+      id: "software-ecommerce",
+      name: "Software & E-Commerce Development",
       icon: ShoppingCart,
-      description: "End-to-end e-commerce consulting, implementation, and optimization.",
-      features: [
-        "Shopify, Magento, Saleor, Medusa",
-        "Complex product configurators",
-        "Checkout automation",
-        "Rules engine implementation",
-        "Payment gateway integration",
-        "0-to-1 store development"
+      description: "Build your digital presence from the ground up with comprehensive end-to-end (0 to 1) software development tailored for small and medium businesses. We create powerful internal tools that streamline operations and customer-facing applications that drive engagement and sales. Our e-commerce expertise spans Shopify, Magento, Saleor, Medusa, and Adobe Commerce, ensuring you get the right platform for your unique needs. We implement electronic data interchange (EDI) for seamless B2B integration and create data-as-a-product solutions that unlock new revenue streams. Every solution emphasizes clean software architecture, maintainability, and scalability—giving you technology that grows alongside your ambitions.",
+      subServices: [
+        "End-to-End (0 to 1) Software Development",
+        "Internal & Customer-Facing Tools",
+        "E-Commerce Platforms (Shopify, Magento, Saleor)",
+        "Adobe Commerce & Medusa Implementation",
+        "Electronic Data Interchange (EDI)",
+        "Data-as-a-Product Solutions",
+        "Software Architecture Design",
+        "API Development & Integration"
       ],
       popular: false,
       gradient: "from-primary-light via-primary to-primary-dark"
     },
     {
-      id: "cloud-infrastructure",
-      name: "Cloud & Infrastructure",
+      id: "cloud-iot",
+      name: "Cloud & IoT Solutions",
       icon: Cloud,
-      description: "Scalable cloud solutions and infrastructure management for modern businesses.",
-      features: [
-        "Cloud migrations (Public & Private)",
-        "Infrastructure management",
-        "DevOps, DevSecOps, CI/CD",
-        "Container orchestration",
-        "Cloud cost optimization",
-        "Disaster recovery planning"
+      description: "Future-proof your business with cloud infrastructure and IoT solutions designed for growth. We handle seamless cloud migrations to public or private environments, ensuring minimal disruption and maximum performance. Our infrastructure management services keep your systems running smoothly while optimizing costs. Specializing in IoT projects, we bring physical and digital worlds together through digital twins, smart device integration, and real-time monitoring. Our EV charger management solutions cover roaming, billing, and CRM integration—positioning you at the forefront of the electric vehicle revolution. We also integrate cutting-edge Web3 technologies, helping forward-thinking businesses embrace decentralized solutions and blockchain opportunities with confidence and clarity.",
+      subServices: [
+        "Cloud Migrations (Public & Private)",
+        "Infrastructure Management & Optimization",
+        "IoT Project Implementation",
+        "Digital Twins & Smart Devices",
+        "EV Charger Management Systems",
+        "Roaming, Billing & CRM Integration",
+        "Web3 Integration & Blockchain",
+        "DevOps & DevSecOps Implementation"
       ],
       popular: false,
       gradient: "from-primary via-primary-light to-primary-dark"
-    },
-    {
-      id: "custom-development",
-      name: "Custom Development",
-      icon: Code,
-      description: "Bespoke software solutions tailored to your unique business requirements.",
-      features: [
-        "Web & mobile app development",
-        "Internal & customer-facing tools",
-        "Software architecture design",
-        "Business process automation",
-        "API development & integration",
-        "Data as a Product solutions"
-      ],
-      popular: false,
-      gradient: "from-primary-dark via-primary-light to-primary"
-    },
-    {
-      id: "maintenance-operations",
-      name: "Maintenance & Operations",
-      icon: Settings,
-      description: "Ongoing support, maintenance, and operational excellence for your systems.",
-      features: [
-        "24/7 system monitoring",
-        "Performance optimization",
-        "Security updates & patches",
-        "Technical support",
-        "System upgrades",
-        "Documentation & training"
-      ],
-      popular: false,
-      gradient: "from-primary-light via-primary-dark to-primary"
     }
   ];
 
@@ -143,7 +117,7 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -173,19 +147,19 @@ const Services = () => {
                       <Icon className="h-6 w-6 text-primary-foreground" />
                     </div>
                   </div>
-                  <CardTitle className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                  <CardTitle className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">
                     {service.name}
                   </CardTitle>
-                  <CardDescription className="text-muted-foreground leading-relaxed">
+                  <CardDescription className="text-base text-muted-foreground leading-relaxed mt-3">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
 
                 <CardContent className="space-y-3 relative">
-                  {service.features.map((feature, idx) => (
+                  {service.subServices.map((subService, idx) => (
                     <div key={idx} className="flex items-start space-x-3 group/item">
                       <Check className="h-5 w-5 text-primary flex-shrink-0 mt-0.5 group-hover/item:scale-110 transition-transform" />
-                      <span className="text-sm text-muted-foreground group-hover/item:text-foreground transition-colors">{feature}</span>
+                      <span className="text-sm text-muted-foreground group-hover/item:text-foreground transition-colors">{subService}</span>
                     </div>
                   ))}
                 </CardContent>
@@ -205,13 +179,58 @@ const Services = () => {
           })}
         </div>
 
+        {/* Delivery Methods & Approach */}
+        <div className="mt-20 bg-gradient-card rounded-2xl border border-border p-8 md:p-12">
+          <div className="text-center mb-10">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Our Delivery Approach
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              We employ industry-leading methodologies and frameworks to ensure successful project delivery, 
+              from initial consultation through implementation and ongoing operations.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+            {[
+              { name: "Agile Development", description: "Iterative approach with rapid feedback cycles" },
+              { name: "DevOps & DevSecOps", description: "Automated deployment with security built-in" },
+              { name: "Scrum Framework", description: "Sprint-based delivery with daily collaboration" },
+              { name: "Kanban Methodology", description: "Continuous flow and visual workflow management" },
+              { name: "SAFe (Scaled Agile)", description: "Enterprise-scale Agile for complex projects" },
+              { name: "Software Architecture", description: "Robust, scalable system design principles" }
+            ].map((method, idx) => (
+              <div 
+                key={method.name}
+                className="p-5 bg-background/50 rounded-lg border border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-md group"
+              >
+                <h4 className="font-semibold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  {method.name}
+                </h4>
+                <p className="text-sm text-muted-foreground">
+                  {method.description}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center">
+            <div className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-primary/10 rounded-full border border-primary/20">
+              <Check className="h-5 w-5 text-primary" />
+              <span className="text-sm font-medium text-foreground">
+                End-to-End (0 to 1) Software Execution & Architecture Excellence
+              </span>
+            </div>
+          </div>
+        </div>
+
         {/* Industry Expertise Section */}
         <div className="mt-20 text-center">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-6">
             Industry Expertise
           </h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
-            {['Automotive', 'E-Commerce', 'Media & Entertainment', 'Telecommunications', 'Logistics', 'EV Charging'].map((industry, idx) => (
+            {['Automotive', 'E-Commerce', 'Media & Entertainment', 'Telecommunications', 'Logistics & Supply Chain', 'EV Charging', 'Finance', 'Healthcare'].map((industry, idx) => (
               <div 
                 key={industry}
                 className="px-6 py-3 bg-gradient-card rounded-full border border-primary/20 hover:border-primary/50 hover:shadow-md transition-all duration-300 cursor-pointer group"
