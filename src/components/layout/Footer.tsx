@@ -19,9 +19,9 @@ const Footer = () => {
         <div className="py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Information */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">Farmly Softwares</h3>
+            <h3 className="text-lg font-bold bg-gradient-primary bg-clip-text text-transparent">Farmly Software Pvt. Ltd.</h3>
             <p className="text-sm text-muted-foreground">
-              Empowering small and medium-scale businesses with innovative AI, automation, and software solutions.
+              Leading software development and AI automation company based in Tamil Nadu, India, serving businesses across India and globally.
             </p>
             <address className="space-y-2 not-italic">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -167,7 +167,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="py-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-muted-foreground">
-            © {currentYear} Farmly Softwares. All rights reserved.
+            © {currentYear} Farmly Software Pvt. Ltd. All rights reserved.
           </div>
           
           <div className="flex space-x-6 text-sm text-muted-foreground">
@@ -186,11 +186,15 @@ const Footer = () => {
         {/* SEO Footer Text */}
         <div className="pb-6">
           <p className="text-xs text-muted-foreground text-center">
-            AI & Automation Consulting | Digital Transformation | IoT & Digital Twin Solutions | Cloud Migration & DevOps | 
-            Enterprise Software Development | EV Charging Management | Business Process Automation | DevSecOps | 
-            Serving Automotive, Energy, Telecom, Finance, Retail, Media & EV Charging Industries | 
-            Karthik Pandian Duraipandi - Senior Product & Automation Consultant | 
-            Fortune 500 Trusted | 10+ Years Experience | 30-90% Efficiency Gains
+            <strong>Farmly Software Pvt. Ltd.</strong> - Leading software development company in Tamil Nadu, India | 
+            Expert in AI automation, agentic AI, cloud migration (AWS, Azure, Google Cloud), DevOps & DevSecOps, 
+            IoT solutions & digital twin, e-commerce development (Shopify, Magento, Adobe Commerce, Saleor), 
+            SaaS & PaaS platforms, microservices architecture, API-first development, MACH architecture, 
+            data management, PIM implementation, business process automation, lean process optimization, 
+            data forecasting & prediction | Serving B2B, B2C, D2C, and A2A businesses | 
+            Custom software development for automotive, EV charging, telecommunications, retail, finance, 
+            logistics, energy, and manufacturing industries | Founded by Karthik Pandian Duraipandi | 
+            Trusted by businesses across India and globally
           </p>
         </div>
       </div>

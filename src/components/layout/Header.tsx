@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,7 +17,7 @@ const Header = () => {
     { label: "About", id: "about" },
     { label: "Why Us", id: "why-choose-us" },
     { label: "Projects", id: "projects" },
-    { label: "Process", id: "process" },
+    { label: "FAQ", id: "faq" },
     { label: "Contact", id: "contact" },
   ];
 
@@ -27,14 +28,16 @@ const Header = () => {
           {/* Logo */}
           <button
             onClick={() => scrollToSection('main-content')}
-            className="flex items-center gap-2 group"
-            aria-label="Home"
+            className="flex items-center gap-3 group"
+            aria-label="Farmly Software Pvt. Ltd. - Home"
           >
-            <div className="w-10 h-10 rounded-lg bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform">
-              <Sparkles className="w-5 h-5 text-background" />
-            </div>
+            <img 
+              src={logo} 
+              alt="Farmly Software Logo" 
+              className="h-10 w-auto group-hover:scale-105 transition-transform"
+            />
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Farmly Softwares
+              Farmly Software
             </span>
           </button>
 

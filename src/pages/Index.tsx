@@ -7,6 +7,7 @@ import WhyChooseUs from "@/components/sections/WhyChooseUs";
 import Services from "@/components/sections/Services";
 import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
+import FAQ from "@/components/sections/FAQ";
 import SkipToContent from "@/components/ui/skip-to-content";
 import MotionToggle from "@/components/ui/motion-toggle";
 
@@ -22,6 +23,7 @@ const Index = () => {
         <WhyChooseUs />
         <Services />
         <Projects />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
