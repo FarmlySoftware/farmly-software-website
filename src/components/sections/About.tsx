@@ -14,7 +14,7 @@ const About = () => {
             <span className="text-sm font-medium text-primary">About Farmly Softwares</span>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Engineering the Future of Intelligent Automation
+            Engineering the Future
           </h2>
           <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6"></div>
         </div>

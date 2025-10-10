@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight, Sparkles, Brain, ShoppingCart, Blocks, Cloud, Cpu, Zap } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Brain, Cpu, ShoppingCart, Blocks, Cloud, Zap, Sparkles } from "lucide-react";
 import { useMotion } from "@/contexts/MotionContext";
 
 const services = [
@@ -10,59 +9,59 @@ const services = [
     title: "AI & Machine Learning",
     description: "Intelligent automation and predictive analytics to transform your business operations",
     features: ["Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI-Powered Automation"],
-    gradient: "from-primary to-accent"
+    gradient: "from-primary to-accent",
+    iconBg: "bg-primary/10",
+    iconColor: "text-primary"
   },
   {
     icon: Cpu,
     title: "IoT & Smart Solutions",
     description: "Connected devices and real-time monitoring for intelligent decision-making",
     features: ["Smart Device Integration", "Real-time Analytics", "Edge Computing", "Industrial IoT"],
-    gradient: "from-accent to-success"
+    gradient: "from-accent to-success",
+    iconBg: "bg-accent/10",
+    iconColor: "text-accent"
   },
   {
     icon: ShoppingCart,
     title: "E-Commerce Solutions",
     description: "Scalable online stores with seamless payment integration and inventory management",
     features: ["Custom Storefronts", "Payment Gateway Integration", "Inventory Management", "Multi-channel Sales"],
-    gradient: "from-success to-primary"
+    gradient: "from-success to-primary",
+    iconBg: "bg-success/10",
+    iconColor: "text-success"
   },
   {
     icon: Blocks,
     title: "Web3 & Blockchain",
     description: "Decentralized applications and smart contracts for the future of digital transactions",
     features: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Blockchain Integration"],
-    gradient: "from-primary to-purple-500"
+    gradient: "from-primary to-purple-500",
+    iconBg: "bg-primary/10",
+    iconColor: "text-primary"
   },
   {
     icon: Cloud,
     title: "Cloud Infrastructure",
     description: "Scalable cloud solutions with DevOps excellence and containerization",
     features: ["Cloud Migration", "Kubernetes & Docker", "CI/CD Pipelines", "Infrastructure as Code"],
-    gradient: "from-purple-500 to-accent"
+    gradient: "from-purple-500 to-accent",
+    iconBg: "bg-accent/10",
+    iconColor: "text-accent"
   },
   {
     icon: Zap,
     title: "Digital Transformation",
     description: "End-to-end modernization of legacy systems and business processes",
     features: ["Process Automation", "Legacy Modernization", "System Integration", "Change Management"],
-    gradient: "from-accent to-primary"
+    gradient: "from-accent to-primary",
+    iconBg: "bg-success/10",
+    iconColor: "text-success"
   }
 ];
 
 const Services = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const { prefersReducedMotion } = useMotion();
-
-  const nextService = () => {
-    setCurrentIndex((prev) => (prev + 1) % services.length);
-  };
-
-  const prevService = () => {
-    setCurrentIndex((prev) => (prev - 1 + services.length) % services.length);
-  };
-
-  const currentService = services[currentIndex];
-  const ServiceIcon = currentService.icon;
 
   return (
     <section id="services" className="py-20 bg-background relative overflow-hidden">
@@ -80,79 +79,52 @@ const Services = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             Services
           </h2>
-          <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto"></div>
+          <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6"></div>
+          <p className="text-lg text-muted-foreground">
+            Transforming businesses with cutting-edge technology solutions
+          </p>
         </div>
 
-        {/* Service Carousel */}
-        <div className="max-w-4xl mx-auto">
-          <Card className={`p-8 md:p-12 bg-gradient-to-br ${currentService.gradient} relative overflow-hidden ${!prefersReducedMotion ? 'transition-all duration-500' : ''}`}>
-            {/* Card content */}
-            <div className="relative z-10">
-              <div className="flex items-start gap-6 mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center flex-shrink-0">
-                  <ServiceIcon className="w-8 h-8 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                    {currentService.title}
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {services.map((service, idx) => {
+            const ServiceIcon = service.icon;
+            return (
+              <Card 
+                key={idx} 
+                className={`group relative overflow-hidden bg-background border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 ${!prefersReducedMotion ? 'hover:-translate-y-2' : ''}`}
+              >
+                {/* Icon Header */}
+                <div className="p-6 pb-0">
+                  <div className={`w-16 h-16 rounded-2xl ${service.iconBg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <ServiceIcon className={`w-8 h-8 ${service.iconColor}`} />
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                    {service.title}
                   </h3>
-                  <p className="text-white/90 text-lg">
-                    {currentService.description}
+                  <p className="text-muted-foreground text-sm mb-4">
+                    {service.description}
                   </p>
                 </div>
-              </div>
 
-              {/* Features Grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                {currentService.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center gap-3 p-4 bg-white/10 backdrop-blur-sm rounded-lg">
-                    <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
-                    <span className="text-white font-medium">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Navigation Controls */}
-              <div className="flex items-center justify-between">
-                <div className="flex gap-2">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={prevService}
-                    className="bg-white/20 hover:bg-white/30 border-white/30 text-white"
-                  >
-                    <ChevronLeft className="w-5 h-5" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    onClick={nextService}
-                    className="bg-white/20 hover:bg-white/30 border-white/30 text-white"
-                  >
-                    <ChevronRight className="w-5 h-5" />
-                  </Button>
-                </div>
-
-                {/* Indicators */}
-                <div className="flex gap-2">
-                  {services.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setCurrentIndex(idx)}
-                      className={`w-2 h-2 rounded-full transition-all ${
-                        idx === currentIndex ? 'bg-white w-8' : 'bg-white/50'
-                      }`}
-                      aria-label={`Go to service ${idx + 1}`}
-                    />
+                {/* Features */}
+                <div className="px-6 pb-6 space-y-2">
+                  {service.features.map((feature, featureIdx) => (
+                    <div key={featureIdx} className="flex items-start gap-2">
+                      <div className={`w-1.5 h-1.5 rounded-full ${service.iconColor.replace('text-', 'bg-')} mt-2 flex-shrink-0`}></div>
+                      <span className="text-sm text-muted-foreground">{feature}</span>
+                    </div>
                   ))}
                 </div>
-              </div>
-            </div>
 
-            {/* Background decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-32 -mt-32"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -ml-32 -mb-32"></div>
-          </Card>
+                {/* Gradient Accent at Bottom */}
+                <div className={`h-1 bg-gradient-to-r ${service.gradient}`}></div>
+
+                {/* Hover Effect */}
+                <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/20 rounded-lg transition-all duration-300 pointer-events-none"></div>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
