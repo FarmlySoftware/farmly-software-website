@@ -146,11 +146,13 @@ const ProjectsShowcase = () => {
                       <div className="flex-grow">
                         {/* Icon Header */}
                         <div className="p-6 pb-0">
-                          <div className={`w-16 h-16 rounded-2xl ${project.iconBg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 relative`}>
-                            <ProjectIcon className={`w-8 h-8 ${project.iconColor}`} />
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className={`w-16 h-16 rounded-2xl ${project.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 flex-shrink-0`}>
+                              <ProjectIcon className={`w-8 h-8 ${project.iconColor}`} />
+                            </div>
                             <Badge 
                               variant="secondary" 
-                              className="absolute -top-2 -right-2 text-xs bg-primary/20 text-primary border-primary/30"
+                              className="text-xs bg-primary/20 text-primary border-primary/30"
                             >
                               {project.category}
                             </Badge>
