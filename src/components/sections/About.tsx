@@ -31,43 +31,6 @@ const About = () => {
               From AI-driven intelligence to cloud infrastructure and digital twins, we deliver <strong className="text-foreground">30–90% efficiency gains</strong> on transformations. Our solutions blend cutting-edge innovation with practical implementation, serving Fortune 500 clients with proven global experience.
             </p>
 
-            <div className="p-6 bg-primary/5 rounded-xl border border-primary/20 space-y-3">
-              <h3 className="text-xl font-bold text-foreground">Why Partner With Us</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Cross-industry expertise delivering 30–90% automation ROI</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>End-to-end delivery from vision to implementation</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>AI-first culture with Fortune 500 credibility</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-primary mt-1">✓</span>
-                  <span>Future-ready cloud architecture & DevOps excellence</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Key Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-4">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary neon-text-subtle">25+</div>
-                <div className="text-sm text-muted-foreground">Years Collectively</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary neon-text-subtle">500+</div>
-                <div className="text-sm text-muted-foreground">Projects Delivered</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-primary neon-text-subtle">90%</div>
-                <div className="text-sm text-muted-foreground">Automation ROI</div>
-              </div>
-            </div>
           </div>
 
           {/* Core Values - Integrated */}
