@@ -108,33 +108,35 @@ const Services = () => {
                 return (
                   <CarouselItem key={idx} className="pl-4 md:basis-1/2 lg:basis-1/3">
                     <Card 
-                      className={`group relative overflow-hidden bg-background border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 h-full ${!prefersReducedMotion ? 'hover:-translate-y-2' : ''}`}
+                      className={`group relative overflow-hidden bg-background border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 h-full flex flex-col ${!prefersReducedMotion ? 'hover:-translate-y-2' : ''}`}
                     >
-                      {/* Icon Header */}
-                      <div className="p-6 pb-0">
-                        <div className={`w-16 h-16 rounded-2xl ${service.iconBg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                          <ServiceIcon className={`w-8 h-8 ${service.iconColor}`} />
-                        </div>
-                        <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                          {service.title}
-                        </h3>
-                        <p className="text-muted-foreground text-sm mb-4">
-                          {service.description}
-                        </p>
-                      </div>
-
-                      {/* Features */}
-                      <div className="px-6 pb-6 space-y-2">
-                        {service.features.map((feature, featureIdx) => (
-                          <div key={featureIdx} className="flex items-start gap-2">
-                            <div className={`w-1.5 h-1.5 rounded-full ${service.iconColor.replace('text-', 'bg-')} mt-2 flex-shrink-0`}></div>
-                            <span className="text-sm text-muted-foreground">{feature}</span>
+                      <div className="flex-grow">
+                        {/* Icon Header */}
+                        <div className="p-6 pb-0">
+                          <div className={`w-16 h-16 rounded-2xl ${service.iconBg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                            <ServiceIcon className={`w-8 h-8 ${service.iconColor}`} />
                           </div>
-                        ))}
+                          <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                            {service.title}
+                          </h3>
+                          <p className="text-muted-foreground text-sm mb-4">
+                            {service.description}
+                          </p>
+                        </div>
+
+                        {/* Features */}
+                        <div className="px-6 pb-6 space-y-2">
+                          {service.features.map((feature, featureIdx) => (
+                            <div key={featureIdx} className="flex items-start gap-2">
+                              <div className={`w-1.5 h-1.5 rounded-full ${service.iconColor.replace('text-', 'bg-')} mt-2 flex-shrink-0`}></div>
+                              <span className="text-sm text-muted-foreground">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
 
                       {/* Gradient Accent at Bottom */}
-                      <div className={`h-1 bg-gradient-to-r ${service.gradient}`}></div>
+                      <div className={`h-1 bg-gradient-to-r ${service.gradient} mt-auto`}></div>
 
                       {/* Hover Effect */}
                       <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/20 rounded-lg transition-all duration-300 pointer-events-none"></div>
