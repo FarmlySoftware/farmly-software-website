@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 import { HelpCircle } from "lucide-react";
 
 const FAQ = () => {
@@ -71,7 +72,7 @@ const FAQ = () => {
 
         <div className="max-w-4xl mx-auto">
           <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
+            {faqs.slice(0, 5).map((faq, index) => (
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
@@ -86,6 +87,19 @@ const FAQ = () => {
               </AccordionItem>
             ))}
           </Accordion>
+
+          {/* See More Button */}
+          <div className="text-center mt-12">
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => window.location.href = '/faq'}
+              className="group"
+            >
+              See All FAQs
+              <HelpCircle className="ml-2 w-4 h-4 group-hover:text-primary transition-colors" />
+            </Button>
+          </div>
         </div>
 
         {/* Structured Data for FAQPage */}

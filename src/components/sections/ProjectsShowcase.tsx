@@ -1,7 +1,15 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Laptop, Smartphone, Tablet, TrendingUp, Zap, Shield } from "lucide-react";
 import { useMotion } from "@/contexts/MotionContext";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const projects = [
   {
@@ -63,65 +71,91 @@ const ProjectsShowcase = () => {
           </p>
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {projects.map((project, idx) => {
-            const ProjectIcon = project.icon;
-            return (
-              <Card 
-                key={idx} 
-                className={`group relative overflow-hidden bg-background border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 ${!prefersReducedMotion ? 'hover:-translate-y-2' : ''}`}
-              >
-                {/* Icon Header */}
-                <div className="p-6 pb-0">
-                  <div className={`w-16 h-16 rounded-2xl ${project.iconBg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 relative`}>
-                    <ProjectIcon className={`w-8 h-8 ${project.iconColor}`} />
-                    <Badge 
-                      variant="secondary" 
-                      className="absolute -top-2 -right-2 text-xs bg-primary/20 text-primary border-primary/30"
+        {/* Projects Carousel */}
+        <div className="max-w-6xl mx-auto px-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {projects.map((project, idx) => {
+                const ProjectIcon = project.icon;
+                return (
+                  <CarouselItem key={idx} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card 
+                      className={`group relative overflow-hidden bg-background border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 h-full ${!prefersReducedMotion ? 'hover:-translate-y-2' : ''}`}
                     >
-                      {project.category}
-                    </Badge>
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {project.description}
-                  </p>
-                </div>
+                      {/* Icon Header */}
+                      <div className="p-6 pb-0">
+                        <div className={`w-16 h-16 rounded-2xl ${project.iconBg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 relative`}>
+                          <ProjectIcon className={`w-8 h-8 ${project.iconColor}`} />
+                          <Badge 
+                            variant="secondary" 
+                            className="absolute -top-2 -right-2 text-xs bg-primary/20 text-primary border-primary/30"
+                          >
+                            {project.category}
+                          </Badge>
+                        </div>
+                        <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                          {project.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-4">
+                          {project.description}
+                        </p>
+                      </div>
 
-                {/* Metrics */}
-                <div className="px-6 mb-4">
-                  <div className="flex items-center gap-2 p-3 bg-primary/5 rounded-lg">
-                    <Zap className="w-4 h-4 text-primary" />
-                    <span className="text-sm font-semibold text-primary">{project.metrics}</span>
-                  </div>
-                </div>
+                      {/* Metrics */}
+                      <div className="px-6 mb-4">
+                        <div className="flex items-center gap-2 p-3 bg-primary/5 rounded-lg">
+                          <Zap className="w-4 h-4 text-primary" />
+                          <span className="text-sm font-semibold text-primary">{project.metrics}</span>
+                        </div>
+                      </div>
 
-                {/* Tech Stack */}
-                <div className="px-6 pb-6">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech, techIdx) => (
-                      <Badge 
-                        key={techIdx} 
-                        variant="outline" 
-                        className="text-xs border-primary/20 text-muted-foreground"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
+                      {/* Tech Stack */}
+                      <div className="px-6 pb-6">
+                        <div className="flex flex-wrap gap-2">
+                          {project.tech.map((tech, techIdx) => (
+                            <Badge 
+                              key={techIdx} 
+                              variant="outline" 
+                              className="text-xs border-primary/20 text-muted-foreground"
+                            >
+                              {tech}
+                            </Badge>
+                          ))}
+                        </div>
+                      </div>
 
-                {/* Gradient Accent at Bottom */}
-                <div className={`h-1 bg-gradient-to-r ${project.gradient}`}></div>
+                      {/* Gradient Accent at Bottom */}
+                      <div className={`h-1 bg-gradient-to-r ${project.gradient}`}></div>
 
-                {/* Hover Effect */}
-                <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/20 rounded-lg transition-all duration-300 pointer-events-none"></div>
-              </Card>
-            );
-          })}
+                      {/* Hover Effect */}
+                      <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/20 rounded-lg transition-all duration-300 pointer-events-none"></div>
+                    </Card>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
+        </div>
+
+        {/* See More Button */}
+        <div className="text-center mt-12 mb-16">
+          <Button 
+            variant="outline" 
+            size="lg"
+            onClick={() => window.location.href = '/projects'}
+            className="group"
+          >
+            See All Projects
+            <TrendingUp className="ml-2 w-4 h-4 group-hover:text-primary transition-colors" />
+          </Button>
         </div>
 
         {/* Bottom Stats */}

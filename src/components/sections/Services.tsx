@@ -1,7 +1,15 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Brain, Cpu, ShoppingCart, Blocks, Cloud, Zap, Sparkles } from "lucide-react";
 import { useMotion } from "@/contexts/MotionContext";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 const services = [
   {
@@ -85,46 +93,72 @@ const Services = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {services.map((service, idx) => {
-            const ServiceIcon = service.icon;
-            return (
-              <Card 
-                key={idx} 
-                className={`group relative overflow-hidden bg-background border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 ${!prefersReducedMotion ? 'hover:-translate-y-2' : ''}`}
-              >
-                {/* Icon Header */}
-                <div className="p-6 pb-0">
-                  <div className={`w-16 h-16 rounded-2xl ${service.iconBg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <ServiceIcon className={`w-8 h-8 ${service.iconColor}`} />
-                  </div>
-                  <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    {service.description}
-                  </p>
-                </div>
+        {/* Services Carousel */}
+        <div className="max-w-6xl mx-auto px-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {services.map((service, idx) => {
+                const ServiceIcon = service.icon;
+                return (
+                  <CarouselItem key={idx} className="pl-4 md:basis-1/2 lg:basis-1/3">
+                    <Card 
+                      className={`group relative overflow-hidden bg-background border-primary/10 hover:border-primary/30 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 h-full ${!prefersReducedMotion ? 'hover:-translate-y-2' : ''}`}
+                    >
+                      {/* Icon Header */}
+                      <div className="p-6 pb-0">
+                        <div className={`w-16 h-16 rounded-2xl ${service.iconBg} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                          <ServiceIcon className={`w-8 h-8 ${service.iconColor}`} />
+                        </div>
+                        <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                          {service.title}
+                        </h3>
+                        <p className="text-muted-foreground text-sm mb-4">
+                          {service.description}
+                        </p>
+                      </div>
 
-                {/* Features */}
-                <div className="px-6 pb-6 space-y-2">
-                  {service.features.map((feature, featureIdx) => (
-                    <div key={featureIdx} className="flex items-start gap-2">
-                      <div className={`w-1.5 h-1.5 rounded-full ${service.iconColor.replace('text-', 'bg-')} mt-2 flex-shrink-0`}></div>
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
+                      {/* Features */}
+                      <div className="px-6 pb-6 space-y-2">
+                        {service.features.map((feature, featureIdx) => (
+                          <div key={featureIdx} className="flex items-start gap-2">
+                            <div className={`w-1.5 h-1.5 rounded-full ${service.iconColor.replace('text-', 'bg-')} mt-2 flex-shrink-0`}></div>
+                            <span className="text-sm text-muted-foreground">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
 
-                {/* Gradient Accent at Bottom */}
-                <div className={`h-1 bg-gradient-to-r ${service.gradient}`}></div>
+                      {/* Gradient Accent at Bottom */}
+                      <div className={`h-1 bg-gradient-to-r ${service.gradient}`}></div>
 
-                {/* Hover Effect */}
-                <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/20 rounded-lg transition-all duration-300 pointer-events-none"></div>
-              </Card>
-            );
-          })}
+                      {/* Hover Effect */}
+                      <div className="absolute inset-0 border-2 border-primary/0 group-hover:border-primary/20 rounded-lg transition-all duration-300 pointer-events-none"></div>
+                    </Card>
+                  </CarouselItem>
+                );
+              })}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
+        </div>
+
+        {/* See More Button */}
+        <div className="text-center mt-12">
+          <Button 
+            variant="outline" 
+            size="lg"
+            onClick={() => window.location.href = '/services'}
+            className="group"
+          >
+            See All Services
+            <Sparkles className="ml-2 w-4 h-4 group-hover:text-primary transition-colors" />
+          </Button>
         </div>
       </div>
     </section>
