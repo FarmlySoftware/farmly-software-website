@@ -40,9 +40,8 @@ const Hero = () => {
           {/* Main Headline */}
           <h1 className={`text-5xl md:text-7xl font-bold mb-6 ${!prefersReducedMotion ? 'animate-slide-up tech-glow-subtle' : ''}`}
               style={{ animationDelay: '0.1s' }}>
-            Engineering the Future of
-            <span className="block mt-2 bg-gradient-primary bg-clip-text text-transparent">
-              Intelligent Automation
+            <span className="bg-gradient-primary bg-clip-text text-transparent">
+              Embrace change, and success will be yours.
             </span>
           </h1>
 
