@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://framlysoftware.com/sitemap.xml
+Sitemap: https://farmlysoftware.com/sitemap.xml
