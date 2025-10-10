@@ -1,14 +1,14 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import * as React from 'react';
 
 interface MotionContextType {
   prefersReducedMotion: boolean;
   toggleMotion: () => void;
 }
 
-const MotionContext = createContext<MotionContextType | undefined>(undefined);
+const MotionContext = React.createContext<MotionContextType | undefined>(undefined);
 
-export const MotionProvider = ({ children }: { children: ReactNode }) => {
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(() => {
+export const MotionProvider = ({ children }: { children: React.ReactNode }) => {
+  const [prefersReducedMotion, setPrefersReducedMotion] = React.useState(() => {
     // Check user's system preference
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     // Check localStorage for user preference
@@ -16,7 +16,7 @@ export const MotionProvider = ({ children }: { children: ReactNode }) => {
     return stored !== null ? stored === 'true' : mediaQuery.matches;
   });
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Listen for system preference changes
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const handleChange = (e: MediaQueryListEvent) => {
@@ -29,7 +29,7 @@ export const MotionProvider = ({ children }: { children: ReactNode }) => {
     return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
-  useEffect(() => {
+  React.useEffect(() => {
     // Apply or remove animation class to body
     if (prefersReducedMotion) {
       document.body.classList.add('reduce-motion');
@@ -52,7 +52,7 @@ export const MotionProvider = ({ children }: { children: ReactNode }) => {
 };
 
 export const useMotion = () => {
-  const context = useContext(MotionContext);
+  const context = React.useContext(MotionContext);
   if (context === undefined) {
     throw new Error('useMotion must be used within a MotionProvider');
   }
