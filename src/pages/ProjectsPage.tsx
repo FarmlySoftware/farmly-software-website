@@ -144,18 +144,18 @@ const ProjectsPage = () => {
       <Header />
       <main id="main-content" role="main">
         {/* Hero Section with Rotating Project */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
+        <section className="page-top-spacing bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.03]">
-            <div className="absolute top-0 left-0 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent rounded-full blur-3xl"></div>
+            <div className="absolute top-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
           </div>
 
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container mx-auto container-padding relative z-10">
             <div className="text-center mb-12">
               <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
                 Featured Projects
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="heading-page text-foreground mb-6">
                 Transforming Industries Worldwide
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -278,10 +278,10 @@ const ProjectsPage = () => {
         </section>
 
         {/* All Projects Grid */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="section-padding bg-background">
+          <div className="container mx-auto container-padding">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2 className="heading-section text-foreground mb-4">
                 All Projects
               </h2>
               <p className="text-lg text-muted-foreground">

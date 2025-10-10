@@ -51,18 +51,18 @@ const ProjectsShowcase = () => {
   const { prefersReducedMotion } = useMotion();
 
   return (
-    <section id="projects" className="py-20 bg-muted/30 relative overflow-hidden">
+    <section id="projects" className="section-padding bg-muted/30 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5"></div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto container-padding relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 backdrop-blur-sm rounded-full border border-accent/20 mb-4">
-            <TrendingUp className="w-4 h-4 text-accent" />
-            <span className="text-sm font-medium text-accent">Featured Work</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20 mb-4">
+            <TrendingUp className="w-4 h-4 text-primary" />
+            <span className="text-sm font-medium text-primary">Featured Work</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="heading-section text-foreground mb-4">
             Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6"></div>

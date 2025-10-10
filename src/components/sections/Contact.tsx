@@ -103,20 +103,20 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-secondary/30 relative overflow-hidden">
+    <section id="contact" className="section-padding bg-secondary/30 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-[0.03]">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-primary-light rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-dark rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary/20 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto container-padding relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-slide-up">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
             <span className="text-sm font-medium text-primary">Let's Connect</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="heading-section text-foreground mb-4">
             Get Started Today
           </h2>
           <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6 animate-gradient"></div>
@@ -140,12 +140,12 @@ const Contact = () => {
                   className="block group"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <Card className="border-border hover:border-primary/40 transition-all duration-300 hover:shadow-custom-lg hover:-translate-y-1 overflow-hidden">
-                    <div className={`absolute inset-0 bg-gradient-to-br ${method.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}></div>
+                   <Card className="card-interactive overflow-hidden">
+                    <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <CardContent className="p-6 relative">
                       <div className="flex items-center space-x-4">
-                        <div className={`p-3 rounded-lg bg-gradient-to-br ${method.gradient} shadow-md group-hover:scale-110 transition-transform duration-300`}>
-                          <Icon className="h-6 w-6 text-primary-foreground" />
+                        <div className="p-3 rounded-lg bg-primary/10 shadow-md group-hover:scale-110 transition-transform duration-300">
+                          <Icon className="h-6 w-6 text-primary" />
                         </div>
                         <div>
                           <p className="text-sm font-medium text-muted-foreground mb-1">{method.title}</p>

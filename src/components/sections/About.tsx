@@ -2,18 +2,18 @@ import aboutTeamImage from "@/assets/about-team.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 bg-muted/30 relative overflow-hidden">
+    <section id="about" className="section-padding bg-muted/30 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-float"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
       
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="container mx-auto container-padding relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 animate-slide-up">
           <div className="inline-block mb-4 px-4 py-2 bg-primary/10 backdrop-blur-sm rounded-full border border-primary/20">
             <span className="text-sm font-medium text-primary">About Farmly Softwares</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="heading-section text-foreground mb-4">
             Engineering the Future
           </h2>
           <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6"></div>
@@ -35,7 +35,7 @@ const About = () => {
 
           {/* Core Values - Integrated */}
           <div>
-            <h3 className="text-2xl font-bold text-foreground mb-6">Our Core Values</h3>
+            <h3 className="heading-subsection text-foreground mb-6">Our Core Values</h3>
             <div className="grid grid-cols-2 gap-4">
               {[
                 { icon: "💡", title: "Innovation", desc: "Pioneering next-gen solutions" },

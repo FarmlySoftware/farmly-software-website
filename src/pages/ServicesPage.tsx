@@ -232,7 +232,7 @@ const ServicesPage = () => {
       <Header />
       <main id="main-content" role="main">
         {/* Hero Section with Rotating Service */}
-        <section className="pt-32 pb-20 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
+        <section className="page-top-spacing bg-gradient-to-b from-background to-muted/30 relative overflow-hidden">
           <div className="absolute inset-0 opacity-[0.03]">
             <div className="absolute inset-0" style={{
               backgroundImage: 'radial-gradient(circle at 2px 2px, hsl(var(--primary)) 1px, transparent 0)',
@@ -240,12 +240,12 @@ const ServicesPage = () => {
             }}></div>
           </div>
 
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="container mx-auto container-padding relative z-10">
             <div className="text-center mb-12">
               <Badge className="mb-4 bg-primary/10 text-primary border-primary/20">
                 Comprehensive Services
               </Badge>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+              <h1 className="heading-page text-foreground mb-6">
                 Full-Stack Digital Solutions
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -353,7 +353,7 @@ const ServicesPage = () => {
 
             {/* Industry Expertise */}
             <div className="mt-20 text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
+              <h3 className="heading-subsection text-foreground mb-8">
                 Industry Expertise
               </h3>
               <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
@@ -373,10 +373,10 @@ const ServicesPage = () => {
         </section>
 
         {/* Why Work With Us Section */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="section-padding bg-background">
+          <div className="container mx-auto container-padding">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              <h2 className="heading-section text-foreground mb-4">
                 Why Work With Farmly Softwares
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

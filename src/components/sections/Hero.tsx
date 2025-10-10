@@ -29,7 +29,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto container-padding py-20">
         <div className="max-w-5xl mx-auto text-center">
           {/* Badge */}
           <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 ${!prefersReducedMotion ? 'animate-slide-up' : ''}`}>
@@ -38,7 +38,7 @@ const Hero = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className={`text-5xl md:text-7xl font-bold mb-6 ${!prefersReducedMotion ? 'animate-slide-up tech-glow-subtle' : ''}`}
+          <h1 className={`heading-hero mb-6 ${!prefersReducedMotion ? 'animate-slide-up tech-glow-subtle' : ''}`}
               style={{ animationDelay: '0.1s' }}>
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Embrace change, and success will be yours.
@@ -77,27 +77,27 @@ const Hero = () => {
           <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto ${!prefersReducedMotion ? 'animate-slide-up' : ''}`}
                style={{ animationDelay: '0.4s' }}>
             <div className="flex flex-col items-center p-6 rounded-xl bg-card/50 border border-primary/10 backdrop-blur-sm hover:border-primary/30 transition-all">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+              <div className="icon-container-primary mb-4">
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
               <div className="text-3xl font-bold text-primary mb-2">25+</div>
-              <div className="text-sm text-muted-foreground">Collectively Years of Industrial Experience</div>
+              <div className="text-sm text-center text-muted-foreground">Collectively Years of Industrial Experience</div>
             </div>
 
             <div className="flex flex-col items-center p-6 rounded-xl bg-card/50 border border-primary/10 backdrop-blur-sm hover:border-primary/30 transition-all">
-              <div className="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center mb-4">
-                <Sparkles className="w-6 h-6 text-accent" />
+              <div className="icon-container-primary mb-4">
+                <Sparkles className="w-6 h-6 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-accent mb-2">90%</div>
-              <div className="text-sm text-muted-foreground">Process Automation Achieved</div>
+              <div className="text-3xl font-bold text-primary mb-2">90%</div>
+              <div className="text-sm text-center text-muted-foreground">Process Automation Achieved</div>
             </div>
 
             <div className="flex flex-col items-center p-6 rounded-xl bg-card/50 border border-primary/10 backdrop-blur-sm hover:border-primary/30 transition-all">
-              <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center mb-4">
-                <Shield className="w-6 h-6 text-success" />
+              <div className="icon-container-primary mb-4">
+                <Shield className="w-6 h-6 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-success mb-2">Global</div>
-              <div className="text-sm text-muted-foreground">Experience in Consulting & Product Companies</div>
+              <div className="text-3xl font-bold text-primary mb-2">Global</div>
+              <div className="text-sm text-center text-muted-foreground">Experience in Consulting & Product Companies</div>
             </div>
           </div>
         </div>

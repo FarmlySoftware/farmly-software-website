@@ -52,14 +52,14 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="faq" className="section-padding bg-background">
+      <div className="container mx-auto container-padding">
         <div className="text-center mb-16 animate-slide-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <HelpCircle className="h-4 w-4 text-primary" />
             <span className="text-sm font-medium text-primary">FAQ</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+          <h2 className="heading-section mb-6">
             Frequently Asked{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
               Questions
