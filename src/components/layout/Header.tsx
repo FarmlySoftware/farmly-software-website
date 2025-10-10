@@ -19,11 +19,11 @@ const Header = () => {
 
   const navLinks = [
     { label: "Home", id: "/", isRoute: true },
-    { label: "About", id: "about", isRoute: false },
-    { label: "Services", id: "services", isRoute: false },
-    { label: "Projects", id: "projects", isRoute: false },
+    { label: "Services", id: "/services", isRoute: true },
+    { label: "Projects", id: "/projects", isRoute: true },
+    { label: "About Us", id: "/about", isRoute: true },
     { label: "FAQs", id: "/faq", isRoute: true },
-    { label: "Contact Us", id: "contact", isRoute: false }
+    { label: "Contact Us", id: "/contact", isRoute: true }
   ];
 
   return (

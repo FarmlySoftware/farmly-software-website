@@ -1,4 +1,6 @@
 import aboutTeamImage from "@/assets/about-team.jpg";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 
 const About = () => {
   return (
@@ -51,6 +53,19 @@ const About = () => {
               ))}
             </div>
           </div>
+        </div>
+
+        {/* See More Button */}
+        <div className="text-center mt-12">
+          <Button 
+            variant="outline" 
+            size="lg"
+            onClick={() => window.location.href = '/about'}
+            className="group"
+          >
+            Learn More About Us
+            <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Button>
         </div>
       </div>
     </section>

@@ -1,25 +1,15 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import Services from "@/components/sections/Services";
-import ProjectsShowcase from "@/components/sections/ProjectsShowcase";
 import Contact from "@/components/sections/Contact";
-import FAQ from "@/components/sections/FAQ";
 import SkipToContent from "@/components/ui/skip-to-content";
 import MotionToggle from "@/components/ui/motion-toggle";
 
-const Index = () => {
+const ContactPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <SkipToContent />
       <Header />
-      <main id="main-content" role="main">
-        <Hero />
-        <Services />
-        <ProjectsShowcase />
-        <About />
-        <FAQ />
+      <main id="main-content" role="main" className="page-top-spacing">
         <Contact />
       </main>
       <Footer />
@@ -28,4 +18,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default ContactPage;
