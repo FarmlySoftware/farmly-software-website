@@ -34,7 +34,7 @@ const Hero = () => {
           {/* Badge */}
           <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 ${!prefersReducedMotion ? 'animate-slide-up' : ''}`}>
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Next-Generation Digital Transformation</span>
+            <span className="text-sm font-medium text-primary">"The Only Constant in Life Is Change." - Heraclitus</span>
           </div>
 
           {/* Main Headline */}
@@ -81,8 +81,8 @@ const Hero = () => {
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">10+</div>
-              <div className="text-sm text-muted-foreground">Years of Enterprise Excellence</div>
+              <div className="text-3xl font-bold text-primary mb-2">25+</div>
+              <div className="text-sm text-muted-foreground">Collectively Years of Industrial Experience</div>
             </div>
 
             <div className="flex flex-col items-center p-6 rounded-xl bg-card/50 border border-primary/10 backdrop-blur-sm hover:border-primary/30 transition-all">
@@ -97,8 +97,8 @@ const Hero = () => {
               <div className="w-12 h-12 rounded-full bg-success/10 flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-success" />
               </div>
-              <div className="text-3xl font-bold text-success mb-2">Fortune 500</div>
-              <div className="text-sm text-muted-foreground">Trusted by Global Leaders</div>
+              <div className="text-3xl font-bold text-success mb-2">Global</div>
+              <div className="text-sm text-muted-foreground">Experience in Consulting & Product Companies</div>
             </div>
           </div>
         </div>
