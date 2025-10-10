@@ -3,11 +3,10 @@ import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import ServiceOverview from "@/components/sections/ServiceOverview";
 import About from "@/components/sections/About";
-import WhyChooseUs from "@/components/sections/WhyChooseUs";
-import Services from "@/components/sections/Services";
-import Projects from "@/components/sections/Projects";
 import Contact from "@/components/sections/Contact";
 import FAQ from "@/components/sections/FAQ";
+import SEOOptimization from "@/components/sections/SEOOptimization";
+import ProcessExcellence from "@/components/sections/ProcessExcellence";
 import SkipToContent from "@/components/ui/skip-to-content";
 import MotionToggle from "@/components/ui/motion-toggle";
 
@@ -20,9 +19,8 @@ const Index = () => {
         <Hero />
         <ServiceOverview />
         <About />
-        <WhyChooseUs />
-        <Services />
-        <Projects />
+        <SEOOptimization />
+        <ProcessExcellence />
         <FAQ />
         <Contact />
       </main>
