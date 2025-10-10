@@ -50,13 +50,28 @@ const Contact = () => {
       return;
     }
 
-    // Simulate form submission
+    // Send email via edge function
     try {
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      const response = await fetch(
+        `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send message');
+      }
       
       toast({
         title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours.",
+        description: data.message || "We'll get back to you within 24 hours.",
       });
 
       // Reset form
@@ -68,9 +83,10 @@ const Contact = () => {
         message: ""
       });
     } catch (error) {
+      console.error('Contact form error:', error);
       toast({
         title: "Submission Error",
-        description: "Something went wrong. Please try again.",
+        description: error instanceof Error ? error.message : "Something went wrong. Please try emailing us directly at contact@farmlysoftware.com",
         variant: "destructive"
       });
     } finally {

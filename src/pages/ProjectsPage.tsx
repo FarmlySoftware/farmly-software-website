@@ -277,53 +277,6 @@ const ProjectsPage = () => {
           </div>
         </section>
 
-        {/* All Projects Grid */}
-        <section className="section-padding bg-background">
-          <div className="container mx-auto container-padding">
-            <div className="text-center mb-12">
-              <h2 className="heading-section text-foreground mb-4">
-                All Projects
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Explore our complete portfolio of successful transformations
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
-              {projects.map((project, idx) => {
-                const ProjectIcon = project.icon;
-                return (
-                  <Card 
-                    key={project.id}
-                    className="group cursor-pointer hover:shadow-custom-lg hover:-translate-y-1 transition-all duration-300 border-border hover:border-primary/40"
-                    onClick={() => setCurrentProject(idx)}
-                  >
-                    <CardHeader>
-                      <div className="flex items-center justify-between mb-3">
-                        <div className={`p-3 rounded-lg bg-gradient-to-br ${project.gradient}`}>
-                          <ProjectIcon className="h-5 w-5 text-white" />
-                        </div>
-                        <Badge variant="outline" className="border-primary/30 text-primary text-xs">
-                          {project.industry}
-                        </Badge>
-                      </div>
-                      <CardTitle className="text-lg font-bold text-foreground group-hover:text-primary transition-colors leading-tight">
-                        {project.title}
-                      </CardTitle>
-                      <CardDescription className="text-sm text-muted-foreground line-clamp-2">
-                        {project.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="text-xs font-semibold text-primary mb-1">Result</div>
-                      <div className="text-sm text-foreground">{project.result}</div>
-                    </CardContent>
-                  </Card>
-                );
-              })}
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>

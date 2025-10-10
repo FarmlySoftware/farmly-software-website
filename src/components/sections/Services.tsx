@@ -155,7 +155,9 @@ const Services = () => {
           <Button 
             variant="outline" 
             size="lg"
-            onClick={() => window.location.href = '/services'}
+            onClick={() => {
+              window.location.href = '/#services';
+            }}
             className="group"
           >
             See All Services
