@@ -41,14 +41,14 @@ const Hero = () => {
           <h1 className={`heading-hero mb-6 ${!prefersReducedMotion ? 'animate-slide-up tech-glow-subtle' : ''}`}
               style={{ animationDelay: '0.1s' }}>
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Bringing ideas to life — powered by AI and insight
+              Automate Your Business. Boost Efficiency.
             </span>
           </h1>
 
           {/* Subtext */}
           <p className={`text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto ${!prefersReducedMotion ? 'animate-slide-up' : ''}`}
              style={{ animationDelay: '0.2s' }}>
-            We build custom healthcare and legal software for clinics and law offices in niche markets. If standard apps don't fit, we deliver digital tools that do.
+            We build custom software that streamlines healthcare and legal workflows, eliminates manual work, and empowers your team to focus on what matters most.
           </p>
 
           {/* CTA Buttons */}
@@ -66,18 +66,22 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="xl"
-              onClick={() => window.open('https://wa.me/918220001607', '_blank')}
+              asChild
               className="border-primary/20 hover:border-primary/40 hover:bg-primary/5"
             >
-              WhatsApp Us
+              <a href="https://wa.me/918220001607" target="_blank" rel="noopener noreferrer">
+                WhatsApp Us
+              </a>
             </Button>
             <Button 
               variant="outline" 
               size="xl"
-              onClick={() => window.open('tel:+918220001607')}
-              className="border-primary/20 hover:border-primary/40 hover:bg-primary/5"
+              asChild
+              className="border-primary/20 hover:border-primary/40 hover:bg-primary/5 md:hidden"
             >
-              Call Now
+              <a href="tel:+918220001607">
+                Call Now
+              </a>
             </Button>
           </div>
 
