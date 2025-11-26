@@ -5,7 +5,6 @@ import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import ProjectsShowcase from "@/components/sections/ProjectsShowcase";
 import Contact from "@/components/sections/Contact";
-import FAQ from "@/components/sections/FAQ";
 import SkipToContent from "@/components/ui/skip-to-content";
 import MotionToggle from "@/components/ui/motion-toggle";
 
@@ -19,7 +18,6 @@ const Index = () => {
         <Services />
         <ProjectsShowcase />
         <About />
-        <FAQ />
         <Contact />
       </main>
       <Footer />

@@ -13,92 +13,26 @@ import {
 
 const projects = [
   {
-    icon: Zap,
-    title: "EV Charging & Energy SaaS Platform Migration",
-    category: "EV Charging & Energy",
-    description: "Migrated legacy EV charger and billing systems to AWS SaaS. Automated 90% of operations across roaming, CRM, and billing.",
-    metrics: "90% automation achieved",
-    tech: ["AWS SaaS", "IoT", "OCPP Protocol"],
-    gradient: "from-yellow-500 to-orange-600",
-    iconBg: "bg-yellow-500/10",
-    iconColor: "text-yellow-500"
-  },
-  {
-    icon: Radio,
-    title: "Telecommunications B2C/B2B App MVP",
-    category: "Telecommunications",
-    description: "Multi-cloud B2C/B2B customer app with intelligent chatbot and CRM/Finance integrations.",
-    metrics: "45% CX improvement",
-    tech: ["Multi-Cloud", "AI Chatbot", "CRM"],
+    icon: Building2,
+    title: "Clinic Management System",
+    category: "Healthcare",
+    description: "Comprehensive solution for patient registration, tracking, medical records, appointment management, vitals tracking, and multi-doctor team management with secure cloud access.",
+    metrics: "Complete clinic workflow solution",
+    tech: ["EMR", "Patient Management", "Appointment Booking", "Cloud Access"],
     gradient: "from-blue-500 to-purple-600",
     iconBg: "bg-blue-500/10",
     iconColor: "text-blue-500"
   },
   {
-    icon: Building2,
-    title: "Automotive Manufacturing DevOps Platform",
-    category: "Automotive",
-    description: "Azure-based DevOps cloud migration for major automotive manufacturer.",
-    metrics: "35% defect reduction",
-    tech: ["Azure DevOps", "CI/CD", "Digital Twin"],
-    gradient: "from-red-500 to-pink-600",
-    iconBg: "bg-red-500/10",
-    iconColor: "text-red-500"
-  },
-  {
-    icon: Tv,
-    title: "Technology & Media Agile Transformation",
-    category: "Technology & Media",
-    description: "Trained 1,000+ engineers in CI/CD, IaC, and automation practices.",
-    metrics: "1,000+ engineers trained",
-    tech: ["DevOps Training", "CI/CD", "IaC"],
+    icon: ShoppingBag,
+    title: "Legal Documentation App",
+    category: "Legal",
+    description: "Streamlines arbitration, conciliation, and suit filing workflows with automated document creation, case progress tracking, secure storage, and advanced search capabilities.",
+    metrics: "Comprehensive legal workflow",
+    tech: ["Document Automation", "Case Tracking", "Secure Storage", "Advanced Search"],
     gradient: "from-purple-500 to-indigo-600",
     iconBg: "bg-purple-500/10",
     iconColor: "text-purple-500"
-  },
-  {
-    icon: ShoppingBag,
-    title: "E-Commerce Checkout & Security Automation",
-    category: "E-Commerce & Retail",
-    description: "Multi-tenant identity management and checkout orchestration APIs.",
-    metrics: "25% lower abandonment",
-    tech: ["Identity Management", "Checkout API"],
-    gradient: "from-green-500 to-teal-600",
-    iconBg: "bg-green-500/10",
-    iconColor: "text-green-500"
-  },
-  {
-    icon: Building2,
-    title: "Industrial Automation Invoice Processing",
-    category: "Industrial Automation",
-    description: "OCR-powered invoice workflow with automated ERP/CRM integration.",
-    metrics: "70% time reduction",
-    tech: ["OCR", "AI/ML", "RPA"],
-    gradient: "from-orange-500 to-red-600",
-    iconBg: "bg-orange-500/10",
-    iconColor: "text-orange-500"
-  },
-  {
-    icon: Truck,
-    title: "B2B Commerce RPA & Sales Automation",
-    category: "B2B Commerce",
-    description: "RPA bots for finance and logistics automation.",
-    metrics: "45% efficiency gain",
-    tech: ["RPA", "Finance Automation", "Logistics"],
-    gradient: "from-cyan-500 to-blue-600",
-    iconBg: "bg-cyan-500/10",
-    iconColor: "text-cyan-500"
-  },
-  {
-    icon: Building2,
-    title: "Oil & Gas Data Systems Optimization",
-    category: "Oil & Gas",
-    description: "Predictive maintenance and taxonomy-driven data classification.",
-    metrics: "40% downtime reduction",
-    tech: ["Predictive Maintenance", "IoT", "AI"],
-    gradient: "from-gray-500 to-slate-600",
-    iconBg: "bg-gray-500/10",
-    iconColor: "text-gray-500"
   }
 ];
 
@@ -118,11 +52,11 @@ const ProjectsShowcase = () => {
             <span className="text-sm font-medium text-primary">Featured Work</span>
           </div>
           <h2 className="heading-section text-foreground mb-4">
-            Projects
+            Our Projects
           </h2>
           <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground">
-            Transforming industries with cutting-edge technology solutions
+            Custom solutions built for healthcare and legal professionals
           </p>
         </div>
 
@@ -223,22 +157,22 @@ const ProjectsShowcase = () => {
             <div className="flex items-center justify-center mb-3">
               <Shield className="w-8 h-8 text-primary" />
             </div>
-            <div className="text-3xl font-bold text-primary mb-1">500+</div>
-            <div className="text-sm text-muted-foreground">Projects Delivered</div>
+            <div className="text-3xl font-bold text-primary mb-1">Secure</div>
+            <div className="text-sm text-muted-foreground">HIPAA-Compliant Solutions</div>
           </div>
           <div className="text-center p-6 bg-background/50 backdrop-blur-sm rounded-xl border border-accent/10 hover:border-accent/30 transition-all">
             <div className="flex items-center justify-center mb-3">
               <TrendingUp className="w-8 h-8 text-accent" />
             </div>
-            <div className="text-3xl font-bold text-accent mb-1">90%</div>
-            <div className="text-sm text-muted-foreground">Automation ROI</div>
+            <div className="text-3xl font-bold text-accent mb-1">SMB</div>
+            <div className="text-sm text-muted-foreground">Focused on Small & Medium Businesses</div>
           </div>
           <div className="text-center p-6 bg-background/50 backdrop-blur-sm rounded-xl border border-success/10 hover:border-success/30 transition-all">
             <div className="flex items-center justify-center mb-3">
               <Zap className="w-8 h-8 text-success" />
             </div>
-            <div className="text-3xl font-bold text-success mb-1">25+</div>
-            <div className="text-sm text-muted-foreground">Years Collectively</div>
+            <div className="text-3xl font-bold text-success mb-1">AI-Powered</div>
+            <div className="text-sm text-muted-foreground">Intelligent Automation</div>
           </div>
         </div>
       </div>

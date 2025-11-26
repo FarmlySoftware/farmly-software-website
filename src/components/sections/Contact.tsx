@@ -86,7 +86,7 @@ const Contact = () => {
       console.error('Contact form error:', error);
       toast({
         title: "Submission Error",
-        description: error instanceof Error ? error.message : "Something went wrong. Please try emailing us directly at contact@farmlysoftware.com",
+        description: error instanceof Error ? error.message : "Something went wrong. Please email us directly at contact@farmlysoftware.com or WhatsApp us at +91 82200 01607",
         variant: "destructive"
       });
     } finally {
@@ -98,8 +98,8 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "Contact@farmlysoftwares.com",
-      link: "mailto:Contact@farmlysoftwares.com",
+      content: "contact@farmlysoftware.com",
+      link: "mailto:contact@farmlysoftware.com",
       gradient: "from-primary to-primary-dark"
     },
     {
@@ -133,12 +133,11 @@ const Contact = () => {
             <span className="text-sm font-medium text-primary">Let's Connect</span>
           </div>
           <h2 className="heading-section text-foreground mb-4">
-            Get Started Today
+            Let's Build Your Next Digital Solution
           </h2>
           <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6 animate-gradient"></div>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Ready to transform your business with cutting-edge solutions? Reach out for a free consultation
-            and let's discuss how we can help you achieve your goals.
+            Ready to transform your clinic or law office with custom software? Get in touch for a consultation.
           </p>
         </div>
 
@@ -257,14 +256,9 @@ const Contact = () => {
                           <SelectValue placeholder="Select a service" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="ai-automation">AI & Agentic Automation</SelectItem>
-                          <SelectItem value="business-optimization">Business Process Engineering</SelectItem>
-                          <SelectItem value="software-ecommerce">Enterprise Software & E-Commerce</SelectItem>
-                          <SelectItem value="cloud-iot">Cloud, IoT & Digital Twin</SelectItem>
-                          <SelectItem value="devops-devsecops">DevOps & DevSecOps</SelectItem>
-                          <SelectItem value="ev-charging">EV Charging Management</SelectItem>
-                          <SelectItem value="digital-transformation">Digital Transformation Consulting</SelectItem>
-                          <SelectItem value="consultation">Free Consultation</SelectItem>
+                          <SelectItem value="healthcare-clinic">Healthcare — Clinic Management Software</SelectItem>
+                          <SelectItem value="legal-documentation">Legal — Documentation Assistant</SelectItem>
+                          <SelectItem value="consultation">General Inquiry</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>

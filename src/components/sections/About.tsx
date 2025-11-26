@@ -16,43 +16,55 @@ const About = () => {
             <span className="text-sm font-medium text-primary">About Farmly Softwares</span>
           </div>
           <h2 className="heading-section text-foreground mb-4">
-            Engineering the Future
+            Meet the Team
           </h2>
           <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6"></div>
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            The Farmly Software leadership team — experts in delivering niche digital solutions
+          </p>
         </div>
 
-        {/* Main Content - Optimized for iPad/Laptop */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-16 max-w-6xl mx-auto">
-          {/* Content */}
-          <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Farmly Softwares pioneers next-generation digital transformation through cutting-edge AI, IoT, and intelligent automation. We architect tomorrow's solutions with innovation at our core, empowering industries across <strong className="text-foreground">Automotive, Energy, Finance, Retail, Telecom, and EV Charging</strong> to leap into the digital future.
-            </p>
-            
-            <p className="text-muted-foreground leading-relaxed">
-              From AI-driven intelligence to cloud infrastructure and digital twins, we deliver <strong className="text-foreground">30–90% efficiency gains</strong> on transformations. Our solutions blend cutting-edge innovation with practical implementation, serving Fortune 500 clients with proven global experience.
-            </p>
-
-          </div>
-
-          {/* Core Values - Integrated */}
-          <div>
-            <h3 className="heading-subsection text-foreground mb-6">Our Core Values</h3>
-            <div className="grid grid-cols-2 gap-4">
-              {[
-                { icon: "💡", title: "Innovation", desc: "Pioneering next-gen solutions" },
-                { icon: "🤝", title: "Collaboration", desc: "Partnership-driven delivery" },
-                { icon: "✨", title: "Integrity", desc: "Trust and transparency" },
-                { icon: "📈", title: "Impact", desc: "Measurable business results" }
-              ].map((value, idx) => (
-                <div key={value.title} className="p-4 bg-background/50 rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300">
-                  <div className="text-3xl mb-2">{value.icon}</div>
-                  <h4 className="font-bold text-foreground text-sm mb-1">{value.title}</h4>
-                  <p className="text-xs text-muted-foreground">{value.desc}</p>
-                </div>
-              ))}
+        {/* Team Members */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto">
+          <div className="text-center p-6 bg-background/50 rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300">
+            <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+              <span className="text-3xl font-bold text-primary">AV</span>
             </div>
+            <h3 className="text-xl font-bold text-foreground mb-2">Aaditya Velava</h3>
+            <p className="text-sm text-primary font-medium mb-3">Solution Architect</p>
+            <p className="text-sm text-muted-foreground">
+              Solution builder focused on understanding customer challenges and architecting software that solves real-world needs.
+            </p>
           </div>
+
+          <div className="text-center p-6 bg-background/50 rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300">
+            <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-accent/10 flex items-center justify-center">
+              <span className="text-3xl font-bold text-accent">KD</span>
+            </div>
+            <h3 className="text-xl font-bold text-foreground mb-2">Karthik Duraipandi</h3>
+            <p className="text-sm text-accent font-medium mb-3">Business Development</p>
+            <p className="text-sm text-muted-foreground">
+              Drives customer acquisition, onboarding, and relationship-building. Guides clients from first contact to lasting success.
+            </p>
+          </div>
+
+          <div className="text-center p-6 bg-background/50 rounded-xl border border-primary/10 hover:border-primary/30 transition-all duration-300">
+            <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-success/10 flex items-center justify-center">
+              <span className="text-3xl font-bold text-success">DS</span>
+            </div>
+            <h3 className="text-xl font-bold text-foreground mb-2">Dinesh Saravanan</h3>
+            <p className="text-sm text-success font-medium mb-3">Operations & Delivery</p>
+            <p className="text-sm text-muted-foreground">
+              Heads operations and delivery, ensuring every solution is built, deployed, and supported to the highest standards.
+            </p>
+          </div>
+        </div>
+
+        {/* Mission Statement */}
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-lg text-muted-foreground leading-relaxed">
+            Together, we help SMBs turn industry gaps into digital strengths. We specialize in custom healthcare and legal software — building tools that standard apps can't deliver.
+          </p>
         </div>
 
         {/* See More Button */}

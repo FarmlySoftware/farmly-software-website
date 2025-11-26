@@ -34,21 +34,21 @@ const Hero = () => {
           {/* Badge */}
           <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 ${!prefersReducedMotion ? 'animate-slide-up' : ''}`}>
             <Sparkles className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">"The Only Constant in Life Is Change." - Heraclitus</span>
+            <span className="text-sm font-medium text-primary">Niche Solutions. Real Results.</span>
           </div>
 
           {/* Main Headline */}
           <h1 className={`heading-hero mb-6 ${!prefersReducedMotion ? 'animate-slide-up tech-glow-subtle' : ''}`}
               style={{ animationDelay: '0.1s' }}>
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Embrace change, and success will be yours.
+              Bringing ideas to life — powered by AI and insight
             </span>
           </h1>
 
           {/* Subtext */}
           <p className={`text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto ${!prefersReducedMotion ? 'animate-slide-up' : ''}`}
              style={{ animationDelay: '0.2s' }}>
-            We help enterprises evolve through AI, IoT, Cloud, and Automation — from concept to scale
+            We build custom healthcare and legal software for clinics and law offices in niche markets. If standard apps don't fit, we deliver digital tools that do.
           </p>
 
           {/* CTA Buttons */}
@@ -60,16 +60,24 @@ const Hero = () => {
               onClick={scrollToContact}
               className="group"
             >
-              Get Consultation
+              Contact Us
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button 
               variant="outline" 
               size="xl"
-              onClick={scrollToProjects}
+              onClick={() => window.open('https://wa.me/918220001607', '_blank')}
               className="border-primary/20 hover:border-primary/40 hover:bg-primary/5"
             >
-              View Case Studies
+              WhatsApp Us
+            </Button>
+            <Button 
+              variant="outline" 
+              size="xl"
+              onClick={() => window.open('tel:+918220001607')}
+              className="border-primary/20 hover:border-primary/40 hover:bg-primary/5"
+            >
+              Call Now
             </Button>
           </div>
 
@@ -80,24 +88,24 @@ const Hero = () => {
               <div className="icon-container-primary mb-4">
                 <TrendingUp className="w-6 h-6 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">25+</div>
-              <div className="text-sm text-center text-muted-foreground">Collectively Years of Industrial Experience</div>
+              <div className="text-3xl font-bold text-primary mb-2">SMB</div>
+              <div className="text-sm text-center text-muted-foreground">Focus on Healthcare & Legal</div>
             </div>
 
             <div className="flex flex-col items-center p-6 rounded-xl bg-card/50 border border-primary/10 backdrop-blur-sm hover:border-primary/30 transition-all">
               <div className="icon-container-primary mb-4">
                 <Sparkles className="w-6 h-6 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">90%</div>
-              <div className="text-sm text-center text-muted-foreground">Process Automation Achieved</div>
+              <div className="text-3xl font-bold text-primary mb-2">AI-Powered</div>
+              <div className="text-sm text-center text-muted-foreground">Intelligent Automation Built-In</div>
             </div>
 
             <div className="flex flex-col items-center p-6 rounded-xl bg-card/50 border border-primary/10 backdrop-blur-sm hover:border-primary/30 transition-all">
               <div className="icon-container-primary mb-4">
                 <Shield className="w-6 h-6 text-primary" />
               </div>
-              <div className="text-3xl font-bold text-primary mb-2">Global</div>
-              <div className="text-sm text-center text-muted-foreground">Experience in Consulting & Product Companies</div>
+              <div className="text-3xl font-bold text-primary mb-2">Secure</div>
+              <div className="text-sm text-center text-muted-foreground">Cloud-Based with Data Privacy</div>
             </div>
           </div>
         </div>

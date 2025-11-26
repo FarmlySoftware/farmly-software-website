@@ -14,57 +14,21 @@ import {
 const services = [
   {
     icon: Brain,
-    title: "AI & Machine Learning",
-    description: "Intelligent automation and predictive analytics to transform your business operations",
-    features: ["Natural Language Processing", "Computer Vision", "Predictive Analytics", "AI-Powered Automation"],
+    title: "Healthcare — Clinic Management Software",
+    description: "Comprehensive platform designed for clinics needing more than a one-size-fits-all solution",
+    features: ["Patient Management", "Medical Record Keeping (EMR)", "Appointment Scheduling", "Vitals & Health Tracking", "Doctor & Staff Management"],
     gradient: "from-primary to-accent",
     iconBg: "bg-primary/10",
     iconColor: "text-primary"
   },
   {
-    icon: Cpu,
-    title: "IoT & Smart Solutions",
-    description: "Connected devices and real-time monitoring for intelligent decision-making",
-    features: ["Smart Device Integration", "Real-time Analytics", "Edge Computing", "Industrial IoT"],
-    gradient: "from-accent to-success",
-    iconBg: "bg-accent/10",
-    iconColor: "text-accent"
-  },
-  {
-    icon: ShoppingCart,
-    title: "E-Commerce Solutions",
-    description: "Scalable online stores with seamless payment integration and inventory management",
-    features: ["Custom Storefronts", "Payment Gateway Integration", "Inventory Management", "Multi-channel Sales"],
-    gradient: "from-success to-primary",
-    iconBg: "bg-success/10",
-    iconColor: "text-success"
-  },
-  {
     icon: Blocks,
-    title: "Web3 & Blockchain",
-    description: "Decentralized applications and smart contracts for the future of digital transactions",
-    features: ["Smart Contracts", "DeFi Solutions", "NFT Platforms", "Blockchain Integration"],
-    gradient: "from-primary to-purple-500",
-    iconBg: "bg-primary/10",
-    iconColor: "text-primary"
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Infrastructure",
-    description: "Scalable cloud solutions with DevOps excellence and containerization",
-    features: ["Cloud Migration", "Kubernetes & Docker", "CI/CD Pipelines", "Infrastructure as Code"],
-    gradient: "from-purple-500 to-accent",
+    title: "Legal — Documentation Assistant",
+    description: "Streamlines arbitration, conciliation, and suit filing for law professionals",
+    features: ["Easy Document Creation", "Automated Templates", "Workflow & Progress Tracking", "Secure Repository & Search"],
+    gradient: "from-accent to-primary",
     iconBg: "bg-accent/10",
     iconColor: "text-accent"
-  },
-  {
-    icon: Zap,
-    title: "Digital Transformation",
-    description: "End-to-end modernization of legacy systems and business processes",
-    features: ["Process Automation", "Legacy Modernization", "System Integration", "Change Management"],
-    gradient: "from-accent to-primary",
-    iconBg: "bg-success/10",
-    iconColor: "text-success"
   }
 ];
 
@@ -85,11 +49,11 @@ const Services = () => {
             <span className="text-sm font-medium text-primary">Comprehensive IT Services</span>
           </div>
           <h2 className="heading-section text-foreground mb-4">
-            Services
+            Our Services
           </h2>
           <div className="w-24 h-1 bg-gradient-accent rounded-full mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground">
-            Transforming businesses with cutting-edge technology solutions
+            Custom digital solutions for healthcare and legal professionals
           </p>
         </div>
 
