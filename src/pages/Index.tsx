@@ -3,7 +3,6 @@ import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
-import ProjectsShowcase from "@/components/sections/ProjectsShowcase";
 import Contact from "@/components/sections/Contact";
 import SkipToContent from "@/components/ui/skip-to-content";
 import MotionToggle from "@/components/ui/motion-toggle";
@@ -14,11 +13,10 @@ const Index = () => {
       <SkipToContent />
       <Header />
       <main id="main-content" role="main">
-        <Hero />
-        <Services />
-        <ProjectsShowcase />
-        <About />
-        <Contact />
+      <Hero />
+      <Services />
+      <About />
+      <Contact />
       </main>
       <Footer />
       <MotionToggle />

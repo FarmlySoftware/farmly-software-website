@@ -100,21 +100,24 @@ const Contact = () => {
       title: "Email Us",
       content: "contact@farmlysoftware.com",
       link: "mailto:contact@farmlysoftware.com",
-      gradient: "from-primary to-primary-dark"
+      gradient: "from-primary to-primary-dark",
+      isPhone: false
     },
     {
       icon: Phone,
       title: "Call Us",
       content: "+91 82200 01607",
       link: "tel:+918220001607",
-      gradient: "from-primary-dark to-primary-light"
+      gradient: "from-primary-dark to-accent",
+      isPhone: true
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
       content: "+91 82200 01607",
       link: "https://wa.me/918220001607",
-      gradient: "from-primary-light to-primary"
+      gradient: "from-accent to-primary",
+      isPhone: false
     }
   ];
 
@@ -152,7 +155,7 @@ const Contact = () => {
                   href={method.link}
                   target={method.link.startsWith('http') ? '_blank' : undefined}
                   rel={method.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="block group"
+                  className={`block group ${method.isPhone ? 'md:hidden lg:block' : ''}`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                    <Card className="card-interactive overflow-hidden">
@@ -233,35 +236,16 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        type="tel"
-                        placeholder="+91 82200 01607"
-                        value={formData.phone}
-                        onChange={(e) => handleInputChange('phone', e.target.value)}
-                        className="border-input"
-                      />
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label htmlFor="service-select">Service Interest</Label>
-                      <Select
-                        value={formData.service}
-                        onValueChange={(value) => handleInputChange('service', value)}
-                      >
-                        <SelectTrigger id="service-select" className="border-input">
-                          <SelectValue placeholder="Select a service" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="healthcare-clinic">Healthcare — Clinic Management Software</SelectItem>
-                          <SelectItem value="legal-documentation">Legal — Documentation Assistant</SelectItem>
-                          <SelectItem value="consultation">General Inquiry</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone Number</Label>
+                    <Input
+                      id="phone"
+                      type="tel"
+                      placeholder="+91 82200 01607"
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                      className="border-input"
+                    />
                   </div>
 
                   <div className="space-y-2">
