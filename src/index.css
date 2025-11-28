@@ -47,78 +47,78 @@
   }
 }
 
-/* Enterprise Design System - Modern B2B Tech Theme */
+/* Enterprise Design System - Farmly Green/Teal Theme */
 
 @layer base {
   :root {
-    /* Farmly Brand Theme - Tamil Nadu Inspired Warm Palette */
-    --background: 28 25% 6%;
-    --foreground: 45 20% 96%;
-    --card: 28 20% 10%;
-    --card-foreground: 45 20% 96%;
-    --popover: 28 20% 10%;
-    --popover-foreground: 45 20% 96%;
+    /* Farmly Brand Theme - Green/Teal Logo Palette */
+    --background: 160 20% 6%;
+    --foreground: 150 15% 96%;
+    --card: 160 15% 10%;
+    --card-foreground: 150 15% 96%;
+    --popover: 160 15% 10%;
+    --popover-foreground: 150 15% 96%;
     
-    /* Primary - Warm Saffron Orange */
-    --primary: 28 85% 55%;
-    --primary-foreground: 28 25% 6%;
-    --primary-light: 35 90% 65%;
-    --primary-dark: 22 80% 45%;
+    /* Primary - Farmly Teal Green */
+    --primary: 160 70% 40%;
+    --primary-foreground: 160 20% 6%;
+    --primary-light: 155 75% 50%;
+    --primary-dark: 165 65% 30%;
     
     /* Secondary & Muted */
-    --secondary: 45 75% 60%;
-    --secondary-foreground: 28 25% 6%;
-    --muted: 28 15% 25%;
-    --muted-foreground: 35 10% 60%;
+    --secondary: 145 55% 45%;
+    --secondary-foreground: 160 20% 6%;
+    --muted: 160 12% 22%;
+    --muted-foreground: 150 10% 60%;
     
-    /* Accent - Deep Maroon Red */
-    --accent: 350 65% 35%;
-    --accent-foreground: 45 20% 96%;
+    /* Accent - Cyan Teal */
+    --accent: 170 65% 35%;
+    --accent-foreground: 150 15% 96%;
     
     /* Status */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 20% 96%;
+    --destructive-foreground: 150 15% 96%;
     --success: 142 76% 36%;
-    --success-foreground: 45 20% 96%;
+    --success-foreground: 150 15% 96%;
     
     /* Borders */
-    --border: 28 20% 20%;
-    --input: 28 20% 20%;
-    --ring: 28 85% 55%;
+    --border: 160 15% 20%;
+    --input: 160 15% 20%;
+    --ring: 160 70% 40%;
 
-    /* Tamil Nadu Inspired Gradients - Warm Saffron & Maroon */
-    --gradient-primary: linear-gradient(135deg, hsl(28, 85%, 55%), hsl(35, 90%, 65%));
-    --gradient-hero: linear-gradient(135deg, hsl(28, 25%, 6%) 0%, hsl(28, 20%, 10%) 50%, hsl(28, 25%, 6%) 100%);
-    --gradient-card: linear-gradient(180deg, hsl(28, 20%, 10%) 0%, hsl(28, 15%, 15%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(350, 65%, 35%), hsl(28, 85%, 55%));
-    --gradient-mesh: radial-gradient(circle at 50% 50%, hsl(28, 85%, 55%) 0%, transparent 70%);
+    /* Farmly Green/Teal Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(160, 70%, 40%), hsl(155, 75%, 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(160, 20%, 6%) 0%, hsl(160, 15%, 10%) 50%, hsl(160, 20%, 6%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(160, 15%, 10%) 0%, hsl(160, 12%, 14%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(170, 65%, 35%), hsl(160, 70%, 40%));
+    --gradient-mesh: radial-gradient(circle at 50% 50%, hsl(160, 70%, 40%) 0%, transparent 70%);
 
-    /* Warm Glow Shadows - Saffron/Gold Tint */
-    --shadow-sm: 0 1px 2px 0 rgba(237, 137, 54, 0.15);
-    --shadow-md: 0 4px 6px -1px rgba(237, 137, 54, 0.2), 0 2px 4px -1px rgba(237, 137, 54, 0.1);
-    --shadow-lg: 0 10px 15px -3px rgba(237, 137, 54, 0.25), 0 4px 6px -2px rgba(237, 137, 54, 0.1);
-    --shadow-hero: 0 20px 25px -5px rgba(237, 137, 54, 0.3), 0 10px 10px -5px rgba(237, 137, 54, 0.15);
-    --shadow-glow: 0 0 30px rgba(237, 137, 54, 0.5), 0 0 60px rgba(245, 158, 66, 0.3);
-    --shadow-neon: 0 0 10px rgba(237, 137, 54, 0.8), 0 0 20px rgba(237, 137, 54, 0.6), 0 0 30px rgba(237, 137, 54, 0.4);
+    /* Green/Teal Glow Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(45, 163, 138, 0.15);
+    --shadow-md: 0 4px 6px -1px rgba(45, 163, 138, 0.2), 0 2px 4px -1px rgba(45, 163, 138, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(45, 163, 138, 0.25), 0 4px 6px -2px rgba(45, 163, 138, 0.1);
+    --shadow-hero: 0 20px 25px -5px rgba(45, 163, 138, 0.3), 0 10px 10px -5px rgba(45, 163, 138, 0.15);
+    --shadow-glow: 0 0 30px rgba(45, 163, 138, 0.5), 0 0 60px rgba(64, 191, 163, 0.3);
+    --shadow-neon: 0 0 10px rgba(45, 163, 138, 0.8), 0 0 20px rgba(45, 163, 138, 0.6), 0 0 30px rgba(45, 163, 138, 0.4);
 
     /* Smooth animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.75rem;
-    --sidebar-background: 222 47% 8%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 217 91% 60%;
-    --sidebar-primary-foreground: 222 47% 4%;
-    --sidebar-accent: 215 20% 20%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 215 25% 18%;
-    --sidebar-ring: 217 91% 60%;
+    --sidebar-background: 160 20% 8%;
+    --sidebar-foreground: 150 15% 98%;
+    --sidebar-primary: 160 70% 45%;
+    --sidebar-primary-foreground: 160 20% 4%;
+    --sidebar-accent: 160 15% 18%;
+    --sidebar-accent-foreground: 150 15% 98%;
+    --sidebar-border: 160 18% 18%;
+    --sidebar-ring: 160 70% 45%;
   }
 
   .dark {
-    --background: 28 25% 6%;
-    --foreground: 45 20% 96%;
+    --background: 160 20% 6%;
+    --foreground: 150 15% 96%;
   }
 }
 
@@ -188,17 +188,17 @@
     @apply p-4 rounded-xl shadow-lg flex items-center justify-center;
   }
   
-  /* Warm glow effect - Saffron/Gold tint */
+  /* Green/Teal glow effect */
   .tech-glow {
-    text-shadow: 0 0 10px rgba(237, 137, 54, 0.8),
-                 0 0 20px rgba(237, 137, 54, 0.6),
-                 0 0 30px rgba(237, 137, 54, 0.4),
-                 0 0 40px rgba(237, 137, 54, 0.2);
+    text-shadow: 0 0 10px rgba(45, 163, 138, 0.8),
+                 0 0 20px rgba(45, 163, 138, 0.6),
+                 0 0 30px rgba(45, 163, 138, 0.4),
+                 0 0 40px rgba(45, 163, 138, 0.2);
   }
   
   .tech-glow-subtle {
-    text-shadow: 0 0 10px rgba(237, 137, 54, 0.4),
-                 0 0 20px rgba(237, 137, 54, 0.2);
+    text-shadow: 0 0 10px rgba(45, 163, 138, 0.4),
+                 0 0 20px rgba(45, 163, 138, 0.2);
   }
 
   /* Interactive & Future-Ready Animations */
